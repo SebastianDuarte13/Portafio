@@ -19,3 +19,88 @@ function createCursorTrail(x, y) {
       cursorTrail.remove(); // Elimina el rastro después de que la animación termine
   }, 600); // La duración coincide con la animación (0.6s)
 }
+
+const textElement = document.getElementById('text');
+const originalText = "こんにちはこんにちはここんにちは"; // Texto original (18 caracteres)
+const characters = originalText.split(''); // Divide en caracteres
+
+let firstCharChanged = false; 
+let secondCharChanged = false; 
+let thirdCharChanged = false; 
+let fourthCharChanged = false; 
+let fifthCharChanged = false; 
+let sixthCharChanged = false; 
+
+const intervalId = setInterval(() => {
+    const newText = characters.map((char, index) => {
+        if (index === 0 && Date.now() >= startTime + 400) { // Cambiado a 1000 ms
+            firstCharChanged = true; 
+            return 'S'; 
+        }
+        if (firstCharChanged && index === 1 && Date.now() >= startTime + 800) { // Cambiado a 1500 ms
+            secondCharChanged = true; 
+            return 'e'; 
+        }
+        if (secondCharChanged && index === 2 && Date.now() >= startTime + 1000) { // Cambiado a 2000 ms
+            thirdCharChanged = true; 
+            return 'b'; 
+        }
+        if (thirdCharChanged && index === 3 && Date.now() >= startTime + 1200) { // Cambiado a 2500 ms
+            return 'a'; 
+        }
+        if (thirdCharChanged && index === 4 && Date.now() >= startTime + 1400) { // Cambiado a 3000 ms
+            return 's'; 
+        }
+        if (thirdCharChanged && index === 5 && Date.now() >= startTime + 1600) { // Cambiado a 3500 ms
+            sixthCharChanged = true; 
+            return 't'; 
+        }
+        if (sixthCharChanged && index === 6 && Date.now() >= startTime + 1800) { // Cambiado a 4000 ms
+            return 'i'; 
+        }
+        if (sixthCharChanged && index === 7 && Date.now() >= startTime + 2000) { // Cambiado a 4500 ms
+            return 'a'; 
+        }
+        if (sixthCharChanged && index === 8 && Date.now() >= startTime + 2200) { // Cambiado a 5000 ms
+            return 'n'; 
+        }
+        if (sixthCharChanged && index === 9 && Date.now() >= startTime + 2400) { // Cambiado a 5500 ms
+            return ' '; 
+        }
+        if (sixthCharChanged && index === 10 && Date.now() >= startTime + 2600) { // Cambiado a 6000 ms
+            return 'D'; 
+        }
+        if (sixthCharChanged && index === 11 && Date.now() >= startTime + 2800) { // Cambiado a 6500 ms
+            return 'u'; 
+        }
+        if (sixthCharChanged && index === 12 && Date.now() >= startTime + 3000) { // Cambiado a 7000 ms
+            return 'a'; 
+        }
+        if (sixthCharChanged && index === 13 && Date.now() >= startTime + 3200) { // Cambiado a 7500 ms
+            return 'r'; 
+        }
+        if (sixthCharChanged && index === 14 && Date.now() >= startTime + 3400) { // Cambiado a 8000 ms
+            return 't'; 
+        }
+        if (sixthCharChanged && index === 15 && Date.now() >= startTime + 3600) { // Cambiado a 8500 ms
+            return 'e'; 
+        }
+        if (sixthCharChanged && index === 16 && Date.now() >= startTime + 3800) { // Cambiado a 9000 ms
+            return 'e'; 
+        }
+        return Math.random() > 0.5 ? getRandomChar() : char;
+    }).join('');
+
+    textElement.textContent = newText;
+
+    if (Date.now() >= startTime + 9500) { // Cambiado a 9500 ms
+        clearInterval(intervalId);
+    }
+}, 100); // Cambia cada 100 ms (0.1 segundos)
+
+const startTime = Date.now(); 
+
+function getRandomChar() {
+    const chars = ["あ", "い", "う", "え", "お", "か", "き", "く", "け", "こ", "さ", "し", "す", "せ", "そ", "た", "ち", "つ", "て", "と", "な", "に", "ぬ", "ね", "の", "は", "ひ", "ふ", "へ", "ほ", "ま", "み", "む", "め", "も", "や", "ゆ", "よ", "ら", "り", "る", "れ", "ろ", "わ", "を", "ん"];
+    return chars[Math.floor(Math.random() * chars.length)];
+}
