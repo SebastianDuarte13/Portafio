@@ -107,29 +107,36 @@ function getRandomChar() {
 
 
 // container2
-document.addEventListener("DOMContentLoaded", () => {
-    const container2 = document.querySelector('.container2');
+
+
+
+
+  // Escuchar el evento de scroll del mouse
+window.addEventListener('wheel', (event) => {
+    const delta = event.deltaY; // Detecta si es hacia arriba o abajo
+    const currentSection = document.querySelector('.active'); // Encuentra la sección activa
+    let nextSection;
   
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          container2.classList.add('show');
-        }
-      });
-    }, { threshold: 0.1 });
+    if (delta > 0) {
+      // Scroll hacia abajo
+      nextSection = currentSection.nextElementSibling;
+    } else {
+      // Scroll hacia arriba
+      nextSection = currentSection.previousElementSibling;
+    }
   
-    observer.observe(container2);
-});
-
-
-window.addEventListener("scroll", function() {
-const nav = document.querySelector("nav");
-const secondContainer = document.querySelector(".container2");
-
-if (window.scrollY > secondContainer.offsetTop) {
-    nav.classList.add("nav-collapsed");
-} else {
-    nav.classList.remove("nav-collapsed");
-}
+    // Si existe una sección siguiente o anterior
+    if (nextSection) {
+      nextSection.scrollIntoView({ behavior: 'smooth' }); // Desplazarse suavemente
+      currentSection.classList.remove('active'); // Remover clase activa de la actual
+      nextSection.classList.add('active'); // Agregar clase activa a la siguiente
+    }
+  });
+  
+  // Inicializa la primera sección como activa
+  document.querySelector('#section1').classList.add('active');
+  
+  document.querySelector('.container1').addEventListener('wheel', (event) => {
+    event.preventDefault();
   });
   

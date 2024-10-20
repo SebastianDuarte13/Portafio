@@ -6,8 +6,12 @@
   z-index: 2;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  background: url('/fondo.jpg') center/cover fixed no-repeat;
+  background: url('/img/fondo.jpg') center/cover fixed no-repeat;
   color: white;
   height: 100vh;
 
@@ -21,6 +25,7 @@ body::before {
   background-color: rgba(0, 0, 0, 0.3);
   z-index: 1;
   pointer-events: none;
+  height: 200vh;
 }
 
 header {
@@ -35,6 +40,28 @@ header {
 
 .rocknroll-one-regular {
   font-family: "RocknRoll One", sans-serif;
+}
+
+.poppins-semibold-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.poppins-light {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.mukta-malar-extralight {
+  font-family: "Mukta Malar", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+#section1, #section2, #section3 {
+  min-height: 100vh; /* Asegura que cada sección ocupe al menos el 100% de la altura de la ventana */
 }
 
 .der {
@@ -92,12 +119,12 @@ nav a:hover::after {
   }
 }
 
-.container {
+.container1 {
   display: flex;
   /* justify-content: space-around; */
   margin-left: 5%;
   align-items: center;
-  width: 191.2vh;
+  width: 95.02%;
   flex-direction: row;
   margin-top: 7%;
 }
@@ -291,6 +318,10 @@ ul li{
 
 
 /* scroll */
+
+.container_mouse{
+  margin-top: 5%;
+}
 .mouse-btn {
   margin: 10px auto;
   width: 40px;
@@ -343,43 +374,44 @@ ul li{
 
 /* inicio container 2 */
 
-.container2{
+.resto{
   margin-top: 105px;
   width: 100%; /* Ancho del cuadrado */
-  height: 100%; /* Altura del cuadrado */
-  background: rgb(244,44,29);
-  background: linear-gradient(149deg, rgba(244,44,29,1) 0%, rgba(174,25,24,1) 50%, rgba(112,28,26,1) 100%);
+  height: 300%; /* Altura del cuadrado */
+  background: rgb(0,0,0);
+  background: linear-gradient(170deg, rgba(0,0,0,1) 0%, rgba(62,62,62,1) 50%, rgba(64,64,64,1) 51%, rgba(153,153,153,1) 100%);
 }
 
-.container-containet-tittle{
+.container-containet-tittle {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 3px;
 }
 
-.container-tittle{
-  border: 8px solid #000000;
+.container-tittle {
   padding: 15px 60px;
-  border-radius: 16px;
-  box-shadow: inset 0 0 15px #000000, 0 0 30px #000000;
-  position: relative;
 }
 
-.title-text{
+.title-text {
   font-size: 5em;
   font-weight: 500;
-  color: #222;
+  color: rgb(117, 28, 28);
   letter-spacing: 3px;
   cursor: pointer;
   transition: 0.5s;
+  text-shadow: 0 0 5px rgba(117, 28, 28, 0.2), /* Primer desvanecido ligero */
+               0 0 10px rgba(117, 28, 28, 0.2), /* Más fuerte y más lejos */
+               0 0 15px rgba(117, 28, 28, 0.2); /* Más difuso */
 }
 
-.title-text:hover{
+.title-text:hover {
   color: #ffffff;
-  text-shadow: 0 0 5px;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
+               0 0 20px rgba(255, 255, 255, 0.6),
+               0 0 30px rgba(255, 255, 255, 0.4);
 }
-
+ 
 .contenido{
   display: flex;
   justify-content: space-around;
@@ -398,6 +430,7 @@ ul li{
   transition: 0.3s ease;
   border-radius: 30px;
   filter: drop-shadow(0px 0px 30px rgba(255, 255, 255, 0.5));
+  z-index: 1;
 }
 
 .card::after {
@@ -415,12 +448,154 @@ ul li{
 
 .card:hover {
   filter: drop-shadow(0px 0px 30px rgb(0, 0, 0));
+  z-index: 1;
+}
+
+.acercade{
+  padding: 20px;
+  font-size: 18px;
+}
+
+.fondo{
+  display: flex;
+}
+
+.star1 {
+  position: absolute;
+  animation: rotateStars 120s linear infinite;
+  z-index: -1;
+  width:80%;
+  top: -480px;
+}
+#reves {
+  position: absolute;
+  animation: rotateStarsReverse 200s linear infinite;
+  z-index: -1;
+  width: 80%;
+  top: -480px;
+  
+}
+@keyframes rotateStars {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotateStarsReverse {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+ }
 }
 
 /* inicio container 3 */
 .container3{
+  width: 100%;
+  height: 30%;
+}
 
-  width: 100%; /* Ancho del cuadrado */
-  height: 100%; /* Altura del cuadrado */
-  background-color: #000000; 
+.titulo{
+  display: flex;
+  justify-content: center;
+  margin-top: 3%;
+}
+
+/* From Uiverse.io by samuelfcosta18 */ 
+section.card2 {
+  position: relative;
+  width: 550px;
+  height: 650px;
+  background-color: #520202b6;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  perspective: 1000px;
+  transition: all 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.card2 svg {
+  fill: #000;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  border-radius: 3px;
+}
+.card2:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px #000000;
+  background-color: #520202b6;
+  color: #520202b6;
+}
+
+.card2__content {
+  color: #000000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #520202c7;
+  transform: rotateX(-90deg);
+  transform-origin: bottom;
+  transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.card2:hover .card2__content {
+  transform: rotateX(0deg);
+}
+
+.card2__title {
+  margin: 0;
+  padding-left: 5px;
+  font-size: 24px;
+  color: #000000;
+  font-weight: 700;
+}
+
+.card2:hover svg {
+  scale: 0;
+}
+
+.card2__description {
+  margin: 10px 0 0;
+  font-size: 14px;
+  color: #000000;
+  line-height: 1.4;
+}
+
+.propositos{
+  font-size: 20px;
+  color: #ffffff;
+}
+
+.cardss{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.mision{
+  width: 50%;
+}
+
+.letra2 {
+  color: rgb(255, 255, 255);
+  text-shadow: 0 0 10px rgba(255, 0, 0, 0.8);
+  font-size: 50px;
+  transition: transform 0.5s ease; /* Agrega una transición suave */
+}
+.letra2:hover {
+  transform: scale(1.8); /* Aumenta el tamaño al 120% */
+  color: rgb(83, 13, 13); /* Cambia el color al hacer hover, si deseas */
+}
+
+.yo{
+  border-radius: 100px;
 }
