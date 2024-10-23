@@ -11,7 +11,7 @@ html {
 }
 
 body {
-  background: url('/img/fondo.jpg') center/cover fixed no-repeat;
+  background: url('public/img/fondo.jpg') center/cover fixed no-repeat;
   color: white;
   height: 100vh;
 
@@ -105,7 +105,7 @@ nav a:hover::after {
   width: 150px;
   height: 150px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 70%);
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 70%);
   pointer-events: none;
   transform: translate(-50%, -50%);
   opacity: 1;
@@ -377,9 +377,9 @@ ul li{
 .resto{
   margin-top: 105px;
   width: 100%; /* Ancho del cuadrado */
-  height: 300%; /* Altura del cuadrado */
+  height: 500%; /* Altura del cuadrado */
   background: rgb(0,0,0);
-  background: linear-gradient(170deg, rgba(0,0,0,1) 0%, rgba(62,62,62,1) 50%, rgba(64,64,64,1) 51%, rgba(153,153,153,1) 100%);
+background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(105,57,57,1) 30%, rgba(154,41,41,1) 63%, rgba(195,30,30,1) 100%);
 }
 
 .container-containet-tittle {
@@ -416,15 +416,13 @@ ul li{
   display: flex;
   justify-content: space-around;
   align-items: center;
+  margin-top: 5%;
 }
 
-
-
 .card {
-  margin-top: 60px;
   position: relative;
   width: 530px;
-  height: 654px;
+  height: 264px;
   background: rgb(95, 41, 41);
   background: linear-gradient(137deg, rgb(170, 145, 145) 0%, rgb(85, 65, 65) 100%);
   transition: 0.3s ease;
@@ -495,7 +493,7 @@ ul li{
 /* inicio container 3 */
 .container3{
   width: 100%;
-  height: 30%;
+  height: 18%;
 }
 
 .titulo{
@@ -508,7 +506,7 @@ ul li{
 section.card2 {
   position: relative;
   width: 550px;
-  height: 650px;
+  height: 450px;
   background-color: #520202b6;
   border-radius: 10px;
   display: flex;
@@ -598,4 +596,181 @@ section.card2 {
 
 .yo{
   border-radius: 100px;
+
+}
+
+/* inicio container 4 */
+.container4{
+  width: 100%;
+  height: 18%;
+
+}
+
+/* inicio container 5 */
+.container5{
+  width: 100%;
+  height: 18%;
+}
+
+.containerr {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  flex-direction: column;
+}
+
+.titlee  {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+
+.slider-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.slider-preview {
+  width: 20%;
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+  cursor: pointer;
+}
+
+.slider-preview:hover {
+  opacity: 0.75;
+}
+
+.preview-image {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.preview-title {
+  margin-top: 8px;
+  font-size: 0.9rem;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.slider-main {
+  width: 60%;
+  position: relative;
+}
+
+.slider-content {
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.slide {
+  display: none;
+  animation: fadeEffect 0.5s ease;
+}
+
+.slide.active {
+  display: block;
+}
+
+@keyframes fadeEffect {
+  from { opacity: 0.7; }
+  to { opacity: 1; }
+}
+
+.slide img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.slide-info {
+  padding: 20px;
+  background-color: #fff;
+}
+
+.slide-title {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.slide-description {
+  font-size: 1rem;
+  color: #666;
+}
+
+.nav-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.7);
+  border: none;
+  font-size: 1.5rem;
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.nav-button:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.nav-button.prev {
+  left: 10px;
+}
+
+.nav-button.next {
+  right: 10px;
+}
+
+.slider-dots {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #bbb;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.dot.active {
+  background-color: #333;
+}
+
+@media (max-width: 768px) {
+  .slider-container {
+      flex-direction: column;
+  }
+
+  .slider-preview {
+      width: 100%;
+      margin-bottom: 10px;
+  }
+
+  .slider-main {
+      width: 100%;
+  }
+}
+
+/* inicio container 6 */
+.container6{
+  width: 100%;
+  height: 18%;
 }
