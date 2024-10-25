@@ -12,12 +12,16 @@
     @import url('https://fonts.googleapis.com/css2?family=RocknRoll+One&display=swap');
     @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Yeseva+One&display=swap');
     @import url('https://fonts.googleapis.com/css2?family=Mukta+Malar:wght@200;300;400;500;600;700;800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Yeseva+One&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Mukta+Malar:wght@200;300;400;500;600;700;800&family=Neonderthaw&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Yeseva+One&display=swap');
   </style>
 </head>
 <div class="cursor-effect" id="cursor"></div>
 
 <body>
+
   <div class="cenizas">
+    <div id="particles-js">
+    </div>
     <div class="ceniza"></div>
     <div class="ceniza"></div>
     <div class="ceniza"></div>
@@ -48,14 +52,15 @@
       </nav>
     </header>
     <div class="container1">
-      <img src="public/img/luna.png" alt="luna" class="luna">
-
+      <!-- <img src="public/img/luna.png" alt="luna" class="luna"> -->
+      <!-- <img src="public/img/luna.png" alt="luna" class="luna"> -->
+      <p></p>
       <div class="nombre">
         <div class="top">
 
-          <h2 class="">鑑</h2>
-          <h2>人</h2>
-          <h2>和</h2><br>
+          <h2 class="temblor letra3">鑑</h2>
+          <h2 class="temblor letra3">人</h2>
+          <h2 class="temblor letra3">和</h2><br>
         </div>
         <div class="text" id="text"></div>
         <span>
@@ -85,10 +90,11 @@
         </div>
         <div class="top">
           <br>
-          <h2>恐</h2>
-          <h2>予</h2>
-          <h2>界</h2>
+          <h2 class="temblor letra3">恐</h2>
+          <h2 class="temblor letra3">予</h2>
+          <h2 class="temblor letra3">界</h2>
         </div>
+          
       </div>
 
 
@@ -101,8 +107,12 @@
     </div>
 
   </div>
-  <div class="resto">
 
+  <div class="resto">
+    <div class="fondo">
+      <img src="public/img/starts.png" alt="stars" id="fondo" class="star1">
+      <img src="public/img/starts.png" alt="stars" id="reves">
+    </div>
     <div class="container2" id="section2">
       <div class="container-containet-tittle">
         <div class="container-tittle">
@@ -112,7 +122,7 @@
       <div class="contenido">
         <img src="public/img/yo.jpg" alt="" width="30%" height="30%" class="yo">
         <div class="sobremi">
-          <div class="card poppins-semibold-italic">
+          <div class="cardd poppins-semibold-italic">
             <p class="acercade">
               Técnico certificado con experiencia en Java, Python, MySQL, PostgreSQL, y frameworks como SpringBoot y
               Bootstrap. Aplico principios SOLID y arquitectura hexagonal para crear soluciones eficientes. Con
@@ -124,10 +134,7 @@
       </div>
 
     </div>
-    <div class="fondo">
-      <img src="public/img/starts.png" alt="stars" id="fondo" class="star1">
-      <img src="public/img/starts.png" alt="stars" id="reves">
-    </div>
+
     <br id="section3">
     <div class="container3">
       <div class="titulo poppins-light">
@@ -184,41 +191,283 @@
     <br id="section4">
     <div class="container4">
       <div class="titulo" id="Habilidades">
-        <h1>Habilidades</h1>
+        <h1 class="neonderthaw-regular">Habilidades</h1>
       </div>
-    </div>
-    <br id="section5">
-    <div class="container5">
-      <div class="titulo" id="Habilidades">
-        <h1>Proyectos</h1>
-      </div>
-      <div class="containerr">
-        <div class="slider-container" id="sliderContainer">
-            <div class="slider-preview prev" id="prevPreview">
-                <img src="/placeholder.svg?height=200&width=300" alt="Proyecto anterior" class="preview-image">
-                <h4 class="preview-title">Proyecto anterior</h4>
-            </div>
-            <div class="slider-main">
-                <button class="nav-button prev" id="prevButton" aria-label="Proyecto anterior">&lt;</button>
-                <div class="slider-content" id="sliderContent"></div>
-                <button class="nav-button next" id="nextButton" aria-label="Proyecto siguiente">&gt;</button>
-            </div>
-            <div class="slider-preview next" id="nextPreview">
-                <img src="/placeholder.svg?height=200&width=300" alt="Proyecto siguiente" class="preview-image">
-                <h4 class="preview-title">Proyecto siguiente</h4>
-            </div>
+      <div class="cards">
+
+        <div class="card green">
+          <a class="targeta" target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/HTML">
+            <img src="/public/img/html.png" alt="" class="html">
+            <p class="tip">HTML (HyperText Markup Language) es el lenguaje estándar utilizado para crear y estructurar
+              contenido en
+              la web. A través de etiquetas (tags), HTML define la forma y disposición de los elementos en una página
+              web</p>
+          </a>
         </div>
-        <div class="slider-dots" id="sliderDots"></div>
-    </div>
-    <script src="script.js"></script>
-    </div>
-    <br id="section6">
-    <div class="container6">
-      <div class="titulo" id="Habilidades">
-        <h1>Contacto</h1>
+
+        <div class="card green">
+          <a class="targeta" target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS">
+            <img src="/public/img/css.png" alt="" class="css">
+            <p class="tip">CSS (Cascading Style Sheets) es un lenguaje utilizado para describir la presentación y el
+              diseño visual de un documento HTML. Permite aplicar estilos, como colores, fuentes, márgenes y
+              disposición, a las páginas web, mejorando su apariencia y la experiencia del usuario.</p>
+          </a>
+        </div>
+
+        <div class="card green">
+          <a class="targeta" target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">
+            <img src="/public/img/javascript.png" alt="" class="css">
+            <p class="tip">JavaScript es un lenguaje de programación interpretado y basado en texto que se utiliza
+              principalmente para crear contenido dinámico e interactivo en sitios web. Junto con HTML y CSS, es uno de
+              los tres componentes fundamentales para el desarrollo web</p>
+          </a>
+        </div>
+
+        <div class="card green">
+          <a class="targeta" target="_blank" href="https://dev.mysql.com/doc/">
+            <img src="/public/img/mysql.png" alt="" class="html">
+            <p class="tip">MySQL es un sistema de gestión de bases de datos relacional (RDBMS) de código abierto que
+              utiliza el lenguaje SQL (Structured Query Language) para gestionar y manipular bases de datos.</p>
+          </a>
+        </div>
+
       </div>
+      <div class="cards">
+
+        <div class="card green">
+          <a class="targeta" target="_blank" href="https://docs.oracle.com/en/java/">
+            <img src="/public/img/java.png" alt="" class="html">
+            <p class="tip">Java es un lenguaje de programación de propósito general, orientado a objetos, que se utiliza
+              ampliamente para el desarrollo de aplicaciones en una variedad de plataformas.</p>
+          </a>
+        </div>
+
+
+
+
+        <div class="card green">
+          <a class="targeta" target="_blank" href="https://docs.spring.io/spring-boot/index.html">
+            <img src="/public/img/Springboot.png" alt="" class="css">
+            <p class="tip">Spring Boot es un framework de desarrollo para Java que simplifica la creación de
+              aplicaciones empresariales y servicios web. Basado en el popular framework Spring, Spring Boot permite a
+              los desarrolladores crear aplicaciones de manera rápida y eficiente, utilizando convenciones sobre
+              configuraciones.</p>
+          </a>
+        </div>
+
+        <div class="card green">
+          <a class="targeta" target="_blank" href="https://docs.python.org/3/">
+            <img src="/public/img/python.png" alt="" class="css">
+            <p class="tip">Python es un lenguaje de programación de alto nivel, interpretado y de propósito general,
+              conocido por su simplicidad y legibilidad, lo que lo hace ideal tanto para principiantes como para
+              desarrolladores experimentados.</p>
+          </a>
+        </div>
+
+        <div class="card green">
+          <a class="targeta" target="_blank" href="https://www.postgresql.org/docs/">
+            <img src="/public/img/postgrest.png" alt="" class="css">
+            <p class="tip">PostgreSQL (también conocido como Postgres) es un sistema de gestión de bases de datos
+              relacional y orientado a objetos de código abierto, reconocido por su robustez, flexibilidad y conformidad
+              con el estándar SQL.</p>
+          </a>
+        </div>
+
+      </div>
+      <div class="cards">
+
+        <div class="card green">
+          <a class="targeta" target="_blank" href="https://git-scm.com/doc">
+            <img src="/public/img/git.png" alt="" class="css">
+            <p class="tip">Git es un sistema de control de versiones distribuido, ampliamente utilizado en el desarrollo
+              de software para gestionar y realizar un seguimiento de los cambios en el código fuente de manera
+              eficiente.</p>
+          </a>
+        </div>
+
+
+        <div class="card green">
+          <a class="targeta" target="_blank" href="https://docs.github.com/es">
+            <img src="/public/img/github.png" alt="" class="css">
+            <p class="tip">GitHub es una plataforma de desarrollo colaborativo basada en la web, que se utiliza
+              principalmente para alojar y gestionar repositorios de código utilizando Git como sistema de control de
+              versiones. </p>
+          </a>
+        </div>
+
+        <div class="card green">
+          <a class="targeta" target="_blank" href="https://docs.arduino.cc/">
+            <img src="/public/img/arduino.png" alt="arduino" class="css">
+            <p class="tip">Arduino es una plataforma de hardware y software de código abierto que se utiliza para crear
+              proyectos electrónicos interactivos. Es ampliamente utilizada por aficionados, educadores y profesionales
+              para desarrollar dispositivos y sistemas embebidos.</p>
+          </a>
+        </div>
+
+        <div class="card green">
+          <a class="targeta" target="_blank" href="https://nodejs.org/docs/latest/api/">
+            <img src="/public/img/node.png" alt="" class="css">
+            <p class="tip">Node.js es un entorno de ejecución de JavaScript del lado del servidor que permite a los
+              desarrolladores construir aplicaciones escalables y de alto rendimiento. Utiliza un modelo de I/O no
+              bloqueante, lo que lo hace ideal para aplicaciones que requieren un manejo eficiente de múltiples
+              conexiones simultáneas. </p>
+          </a>
+        </div>
+
+      </div>
+
+
     </div>
   </div>
+  <br id="section5">
+  <div class="container5">
+    <div class="titulo" id="Habilidades">
+      <h1 class="titulo-proyectos">Proyectos</h1>
+    </div>
+    <div class="containerr">
+      <div class="slider-container" id="sliderContainer">
+        <div class="slider-preview prev" id="prevPreview">
+          <img src="/placeholder.svg?height=200&width=300" alt="Proyecto anterior" class="preview-image">
+          <h4 class="preview-title">Proyecto anterior</h4>
+        </div>
+        <div class="slider-main">
+          <button class="nav-button prev" id="prevButton" aria-label="Proyecto anterior">&lt;</button>
+          <div class="slider-content" id="sliderContent"></div>
+          <button class="nav-button next" id="nextButton" aria-label="Proyecto siguiente">&gt;</button>
+        </div>
+        <div class="slider-preview next" id="nextPreview">
+          <img src="/placeholder.svg?height=200&width=300" alt="Proyecto siguiente" class="preview-image">
+          <h4 class="preview-title">Proyecto siguiente</h4>
+        </div>
+      </div>
+      <div class="slider-dots" id="sliderDots"></div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+  </div>
+  <br id="section6">
+  <div class="container6">
+    <div class="titulo" id="Habilidades">
+      <h1>Contacto</h1>
+    </div>
+  </div>
+  </div>
+  <script src="particles.min.js"></script>
+  <script>
+    particlesJS(
+      {
+        "particles": {
+          "number": {
+            "value": 80,
+            "density": {
+              "enable": true,
+              "value_area": 800
+            }
+          },
+          "color": {
+            "value": "#0053a5"
+          },
+          "shape": {
+            "type": "circle",
+            "stroke": {
+              "width": 0,
+              "color": "#000000"
+            },
+            "polygon": {
+              "nb_sides": 5
+            },
+            "image": {
+              "src": "img/github.svg",
+              "width": 100,
+              "height": 100
+            }
+          },
+          "opacity": {
+            "value": 0.2,
+            "random": false,
+            "anim": {
+              "enable": false,
+              "speed": 1,
+              "opacity_min": 0.1,
+              "sync": false
+            }
+          },
+          "size": {
+            "value": 3,
+            "random": true,
+            "anim": {
+              "enable": true,
+              "speed": 0,
+              "size_min": 0,
+              "sync": false
+            }
+          },
+          "line_linked": {
+            "enable": true,
+            "distance": 150,
+            "color": "#aeafff",
+            "opacity": 0.4,
+            "width": 1
+          },
+          "move": {
+            "enable": true,
+            "speed": 1.5735393620871414,
+            "direction": "none",
+            "random": false,
+            "straight": false,
+            "out_mode": "out",
+            "bounce": false,
+            "attract": {
+              "enable": false,
+              "rotateX": 600,
+              "rotateY": 1200
+            }
+          }
+        },
+        "interactivity": {
+          "detect_on": "canvas",
+          "events": {
+            "onhover": {
+              "enable": true,
+              "mode": "repulse"
+            },
+            "onclick": {
+              "enable": true,
+              "mode": "push"
+            },
+            "resize": true
+          },
+          "modes": {
+            "grab": {
+              "distance": 400,
+              "line_linked": {
+                "opacity": 1
+              }
+            },
+            "bubble": {
+              "distance": 400,
+              "size": 40,
+              "duration": 2,
+              "opacity": 8,
+              "speed": 3
+            },
+            "repulse": {
+              "distance": 200,
+              "duration": 0.4
+            },
+            "push": {
+              "particles_nb": 4
+            },
+            "remove": {
+              "particles_nb": 2
+            }
+          }
+        },
+        "retina_detect": true
+      }
+    )
+  </script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </body>
 
 <script type="module" src="/main.js"></script>

@@ -21,7 +21,7 @@ function createCursorTrail(x, y) {
 }
 
 const textElement = document.getElementById('text');
-const originalText = "こんにちはこんにちはここんにちは"; // Texto original (18 caracteres)
+const originalText = "こんにちはこんにちはここんにちはちちちはちちはちち"; // Texto original (18 caracteres)
 const characters = originalText.split(''); // Divide en caracteres
 
 let firstCharChanged = false; 
@@ -35,58 +35,86 @@ const intervalId = setInterval(() => {
     const newText = characters.map((char, index) => {
         if (index === 0 && Date.now() >= startTime + 200) { // Cambiado a 1000 ms
             firstCharChanged = true; 
+            return '<'; 
+        }
+        if (index === 1 && Date.now() >= startTime + 200) { // Cambiado a 1000 ms
+            firstCharChanged = true; 
+            return 'h'; 
+        }
+        if (index === 2 && Date.now() >= startTime + 200) { // Cambiado a 1000 ms
+            firstCharChanged = true; 
+            return '3'; 
+        }
+        if (index === 3 && Date.now() >= startTime + 200) { // Cambiado a 1000 ms
+            firstCharChanged = true; 
+            return '>'; 
+        }
+        if (index === 4 && Date.now() >= startTime + 200) { // Cambiado a 1000 ms
+            firstCharChanged = true; 
             return 'S'; 
         }
-        if (firstCharChanged && index === 1 && Date.now() >= startTime + 400) { // Cambiado a 1500 ms
+        if (firstCharChanged && index === 5 && Date.now() >= startTime + 400) { // Cambiado a 1500 ms
             secondCharChanged = true; 
             return 'e'; 
         }
-        if (secondCharChanged && index === 2 && Date.now() >= startTime + 400) { // Cambiado a 2000 ms
+        if (secondCharChanged && index === 6 && Date.now() >= startTime + 400) { // Cambiado a 2000 ms
             thirdCharChanged = true; 
             return 'b'; 
         }
-        if (thirdCharChanged && index === 3 && Date.now() >= startTime + 500) { // Cambiado a 2500 ms
+        if (thirdCharChanged && index === 7 && Date.now() >= startTime + 500) { // Cambiado a 2500 ms
             return 'a'; 
         }
-        if (thirdCharChanged && index === 4 && Date.now() >= startTime + 600) { // Cambiado a 3000 ms
+        if (thirdCharChanged && index === 8 && Date.now() >= startTime + 600) { // Cambiado a 3000 ms
             return 's'; 
         }
-        if (thirdCharChanged && index === 5 && Date.now() >= startTime + 700) { // Cambiado a 3500 ms
+        if (thirdCharChanged && index === 9 && Date.now() >= startTime + 700) { // Cambiado a 3500 ms
             sixthCharChanged = true; 
             return 't'; 
         }
-        if (sixthCharChanged && index === 6 && Date.now() >= startTime + 800) { // Cambiado a 4000 ms
+        if (sixthCharChanged && index === 10 && Date.now() >= startTime + 800) { // Cambiado a 4000 ms
             return 'i'; 
         }
-        if (sixthCharChanged && index === 7 && Date.now() >= startTime + 900) { // Cambiado a 4500 ms
+        if (sixthCharChanged && index === 11 && Date.now() >= startTime + 900) { // Cambiado a 4500 ms
             return 'a'; 
         }
-        if (sixthCharChanged && index === 8 && Date.now() >= startTime + 1000) { // Cambiado a 5000 ms
+        if (sixthCharChanged && index === 12 && Date.now() >= startTime + 1000) { // Cambiado a 5000 ms
             return 'n'; 
         }
-        if (sixthCharChanged && index === 9 && Date.now() >= startTime + 1100) { // Cambiado a 5500 ms
+        if (sixthCharChanged && index === 13 && Date.now() >= startTime + 1100) { // Cambiado a 5500 ms
             return ' '; 
         }
-        if (sixthCharChanged && index === 10 && Date.now() >= startTime + 1200) { // Cambiado a 6000 ms
+        if (sixthCharChanged && index === 14 && Date.now() >= startTime + 1200) { // Cambiado a 6000 ms
             return 'D'; 
         }
-        if (sixthCharChanged && index === 11 && Date.now() >= startTime + 1300) { // Cambiado a 6500 ms
+        if (sixthCharChanged && index === 15 && Date.now() >= startTime + 1300) { // Cambiado a 6500 ms
             return 'u'; 
         }
-        if (sixthCharChanged && index === 12 && Date.now() >= startTime + 1400) { // Cambiado a 7000 ms
+        if (sixthCharChanged && index === 16 && Date.now() >= startTime + 1400) { // Cambiado a 7000 ms
             return 'a'; 
         }
-        if (sixthCharChanged && index === 13 && Date.now() >= startTime + 1500) { // Cambiado a 7500 ms
+        if (sixthCharChanged && index === 17 && Date.now() >= startTime + 1500) { // Cambiado a 7500 ms
             return 'r'; 
         }
-        if (sixthCharChanged && index === 14 && Date.now() >= startTime + 1600) { // Cambiado a 8000 ms
+        if (sixthCharChanged && index === 18 && Date.now() >= startTime + 1600) { // Cambiado a 8000 ms
             return 't'; 
         }
-        if (sixthCharChanged && index === 15 && Date.now() >= startTime + 1700) { // Cambiado a 8500 ms
+        if (sixthCharChanged && index === 19 && Date.now() >= startTime + 1700) { // Cambiado a 8500 ms
             return 'e'; 
         }
-        if (sixthCharChanged && index === 16 && Date.now() >= startTime + 1800) { // Cambiado a 9000 ms
-            return 'e'; 
+        if (sixthCharChanged && index === 20 && Date.now() >= startTime + 1700) { // Cambiado a 8500 ms
+            return '<'; 
+        }
+        if (sixthCharChanged && index === 21 && Date.now() >= startTime + 1700) { // Cambiado a 8500 ms
+            return '/'; 
+        }
+        if (sixthCharChanged && index === 22 && Date.now() >= startTime + 1800) { // Cambiado a 8500 ms
+            return 'h'; 
+        }
+        if (sixthCharChanged && index === 23 && Date.now() >= startTime + 1800) { // Cambiado a 8500 ms
+            return '3'; 
+        }
+        if (sixthCharChanged && index === 24 && Date.now() >= startTime + 1800) { // Cambiado a 9000 ms
+            return '>'; 
         }
         return Math.random() > 0.5 ? getRandomChar() : char;
     }).join('');
@@ -127,16 +155,38 @@ window.addEventListener('wheel', (event) => {
   
     // Si existe una sección siguiente o anterior
     if (nextSection) {
-      nextSection.scrollIntoView({ behavior: 'smooth' }); // Desplazarse suavemente
-      currentSection.classList.remove('active'); // Remover clase activa de la actual
-      nextSection.classList.add('active'); // Agregar clase activa a la siguiente
+        nextSection.scrollIntoView({ behavior: 'smooth' }); // Desplazarse suavemente
+        currentSection.classList.remove('active'); // Remover clase activa de la actual
+        nextSection.classList.add('active'); // Agregar clase activa a la siguiente
     }
-  });
+});
   
   // Inicializa la primera sección como activa
-  document.querySelector('#section1').classList.add('active');
-  
-  document.querySelector('.container1').addEventListener('wheel', (event) => {
-    event.preventDefault();
-  });
-  
+document.querySelector('#section1').classList.add('active');
+
+document.querySelector('.container1').addEventListener('wheel', (event) => {
+event.preventDefault();
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    const sections = document.querySelectorAll('.container1, .container2, .container3, .container4, .container5, .container6');
+    let isScrolling = false;
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const currentSection = entry.target;
+
+                if (!isScrolling) {
+                    isScrolling = true;
+                    currentSection.scrollIntoView({ behavior: 'smooth' });
+                    setTimeout(() => {
+                        isScrolling = false;
+                    }, 800);  // Tiempo de espera hasta que el desplazamiento termine
+                }
+            }
+        });
+    }, { threshold: 0.5 });
+
+    sections.forEach(section => observer.observe(section));
+});

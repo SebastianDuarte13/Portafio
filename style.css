@@ -38,6 +38,33 @@ header {
   align-items: center;
 }
 
+.temblor {
+  display: inline-block; /* Necesario para que el temblor funcione correctamente */
+  font-size: 1.8em; /* Tamaño de la fuente */
+  transition: transform 0.1s; /* Transición suave */
+}
+
+.temblor:hover {
+  animation: temblar 0.1s infinite; /* Aplicar la animación en hover */
+}
+
+@keyframes temblar {
+  0% { transform: translate(0); }
+  25% { transform: translate(-2px, 2px); }
+  50% { transform: translate(2px, -2px); }
+  75% { transform: translate(-2px, -2px); }
+  100% { transform: translate(2px, 2px); }
+}
+
+.letra3 {
+
+  transition: transform 0.3s ease; /* Agrega una transición suave */
+}
+.letra3:hover {
+  transform: scale(1.2); /* Aumenta el tamaño al 120% */
+  color: rgb(114, 114, 114); /* Cambia el color al hacer hover, si deseas */
+}
+
 .rocknroll-one-regular {
   font-family: "RocknRoll One", sans-serif;
 }
@@ -56,6 +83,12 @@ header {
 
 .mukta-malar-extralight {
   font-family: "Mukta Malar", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.neonderthaw-regular {
+  font-family: "Neonderthaw", cursive;
   font-weight: 400;
   font-style: normal;
 }
@@ -121,10 +154,9 @@ nav a:hover::after {
 
 .container1 {
   display: flex;
-  /* justify-content: space-around; */
-  margin-left: 5%;
+  justify-content: center;
   align-items: center;
-  width: 95.02%;
+  width: 100%;
   flex-direction: row;
   margin-top: 7%;
 }
@@ -133,8 +165,8 @@ nav a:hover::after {
   width: 60%;
   display: flex;
   flex-direction: column;
-  justify-content: end;
-  align-items: end;
+  justify-content: center;
+  align-items: center;
   color: #000000;
 }
 
@@ -153,6 +185,8 @@ nav a:hover::after {
 
 .top{
   font-size: 20px;
+  display: flex;
+  flex-direction: column;
 }
 
 .letra:hover {
@@ -321,6 +355,7 @@ ul li{
 
 .container_mouse{
   margin-top: 5%;
+  margin-left: 0px;
 }
 .mouse-btn {
   margin: 10px auto;
@@ -419,7 +454,7 @@ background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(105,57,57,1) 30%, rgb
   margin-top: 5%;
 }
 
-.card {
+.cardd {
   position: relative;
   width: 530px;
   height: 264px;
@@ -431,7 +466,7 @@ background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(105,57,57,1) 30%, rgb
   z-index: 1;
 }
 
-.card::after {
+.cardd::after {
   content: '';
   background-color: #181818;
   position: absolute;
@@ -444,7 +479,7 @@ background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(105,57,57,1) 30%, rgb
   border-radius: 28px;
 }
 
-.card:hover {
+.cardd:hover {
   filter: drop-shadow(0px 0px 30px rgb(0, 0, 0));
   z-index: 1;
 }
@@ -461,16 +496,16 @@ background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(105,57,57,1) 30%, rgb
 .star1 {
   position: absolute;
   animation: rotateStars 120s linear infinite;
-  z-index: -1;
+  z-index: 0;
   width:80%;
-  top: -480px;
+  top: 450px;
 }
 #reves {
   position: absolute;
   animation: rotateStarsReverse 200s linear infinite;
-  z-index: -1;
+  z-index: 0;
   width: 80%;
-  top: -480px;
+  top: 450px;
   
 }
 @keyframes rotateStars {
@@ -499,7 +534,7 @@ background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(105,57,57,1) 30%, rgb
 .titulo{
   display: flex;
   justify-content: center;
-  margin-top: 3%;
+  font-size: 20px;
 }
 
 /* From Uiverse.io by samuelfcosta18 */ 
@@ -596,20 +631,118 @@ section.card2 {
 
 .yo{
   border-radius: 100px;
-
+  z-index: 100;
+  
 }
 
 /* inicio container 4 */
 .container4{
   width: 100%;
   height: 18%;
+  display: flex;
+  flex-direction: column;
+}
 
+/* From Uiverse.io by mohamedkhire */ 
+.card::before {
+  border-radius: 50%;
+  width: 7rem;
+  height: 7rem;
+  top: 20%;
+}
+
+.card::before,
+.card::after {
+  content: "";
+  background-color: #1eaccf21;
+  position: absolute;
+  filter: blur(10px);
+}
+
+.cards {
+  display: flex;
+  gap: 40px;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.cards .red,
+.cards .blue,
+.cards .green {
+  width: 400px;
+  height: 280px;
+  font-family: "CustomFont", Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  backdrop-filter: blur(30px);
+  background-color: rgba(65, 65, 65, 0.11);
+  border: 1px solid rgba(150, 150, 150, 0.418);
+}
+
+.cards .card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 10px;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  transition: 400ms;
+}
+
+.cards .card p.tip {
+  font-size: 70%;
+  font-weight: 700;
+  padding: 20px;
+  margin-top: -20px;
+}
+
+.cards .card p.second-text {
+  font-size: 0.7em;
+}
+
+.cards .card:hover {
+  transform: scale(1.1, 1.1);
+}
+
+.cards:hover > .card:not(:hover) {
+  filter: blur(5px);
+  transform: scale(0.9, 0.9);
+}
+
+.js{
+  width: 100px;
+  height: 100px;
+}
+.css{
+  width: 80px;
+  height: 80px;
+  margin-left: 40%;
+}
+.html{
+  margin-left: 30%;
+  width: 150px;
+  height: 150px;
+}
+
+.arriba{
+  margin-top: -200px;
+}
+
+.targeta{
+  text-decoration: none;
+  color: #000;
 }
 
 /* inicio container 5 */
 .container5{
+  margin-top: -1800px;
   width: 100%;
-  height: 18%;
+  height: 100%;
+
 }
 
 .containerr {
@@ -619,7 +752,7 @@ section.card2 {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100%;
+  height: 90%;
   width: 100%;
   flex-direction: column;
 }
@@ -678,15 +811,41 @@ section.card2 {
 .slide {
   display: none;
   animation: fadeEffect 0.5s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Agregamos la transición */
 }
 
 .slide.active {
   display: block;
 }
 
+/* Efecto de hover para agrandar el slide */
+.slide:hover {
+  transform: scale(1.05); /* Crece un 5% */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Añade una sombra para más efecto */
+}
+
+/* Otros estilos previamente definidos */
 @keyframes fadeEffect {
   from { opacity: 0.7; }
   to { opacity: 1; }
+}
+/* Efecto de desvanecimiento para cambiar entre slides */
+@keyframes fadeOutEffect {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+@keyframes fadeInEffect {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.fade-out {
+  animation: fadeOutEffect 0.5s forwards;
+}
+
+.fade-in {
+  animation: fadeInEffect 0.5s forwards;
 }
 
 .slide img {
@@ -769,8 +928,57 @@ section.card2 {
   }
 }
 
+:root {
+  --color-gris-oscuro: #333333;
+  --color-negro: #000000;
+  --color-rojo: #ff3333;
+}
+
+.titulo-proyectos {
+  font-family: 'Arial', sans-serif;
+  font-size: 3rem;
+  font-weight: bold;
+  background: linear-gradient(45deg, var(--color-gris-oscuro), var(--color-negro));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding: 20px 0;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  animation: subtle-glow 3s infinite;
+}
+
+.titulo-proyectos::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 3px;
+  background-color: var(--color-rojo);
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+}
+
+.titulo-proyectos:hover::after {
+  transform: translateX(0);
+}
+
+@keyframes subtle-glow {
+  0%, 100% {
+    text-shadow: 0 0 5px rgba(255, 51, 51, 0.1);
+  }
+  50% {
+    text-shadow: 0 0 10px rgba(255, 51, 51, 0.2);
+  }
+}
+
 /* inicio container 6 */
 .container6{
   width: 100%;
-  height: 18%;
+  height: 70%;
 }
+
