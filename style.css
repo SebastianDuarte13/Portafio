@@ -38,31 +38,54 @@ header {
   align-items: center;
 }
 
+
 .temblor {
-  display: inline-block; /* Necesario para que el temblor funcione correctamente */
-  font-size: 1.8em; /* Tamaño de la fuente */
-  transition: transform 0.1s; /* Transición suave */
+  display: inline-block;
+  /* Necesario para que el temblor funcione correctamente */
+  font-size: 1.8em;
+  /* Tamaño de la fuente */
+  transition: transform 0.1s;
+  /* Transición suave */
 }
 
 .temblor:hover {
-  animation: temblar 0.1s infinite; /* Aplicar la animación en hover */
+  animation: temblar 0.1s infinite;
+  /* Aplicar la animación en hover */
 }
 
 @keyframes temblar {
-  0% { transform: translate(0); }
-  25% { transform: translate(-2px, 2px); }
-  50% { transform: translate(2px, -2px); }
-  75% { transform: translate(-2px, -2px); }
-  100% { transform: translate(2px, 2px); }
+  0% {
+    transform: translate(0);
+  }
+
+  25% {
+    transform: translate(-2px, 2px);
+  }
+
+  50% {
+    transform: translate(2px, -2px);
+  }
+
+  75% {
+    transform: translate(-2px, -2px);
+  }
+
+  100% {
+    transform: translate(2px, 2px);
+  }
 }
 
 .letra3 {
 
-  transition: transform 0.3s ease; /* Agrega una transición suave */
+  transition: transform 0.3s ease;
+  /* Agrega una transición suave */
 }
+
 .letra3:hover {
-  transform: scale(1.2); /* Aumenta el tamaño al 120% */
-  color: rgb(114, 114, 114); /* Cambia el color al hacer hover, si deseas */
+  transform: scale(1.2);
+  /* Aumenta el tamaño al 120% */
+  color: rgb(114, 114, 114);
+  /* Cambia el color al hacer hover, si deseas */
 }
 
 .rocknroll-one-regular {
@@ -93,8 +116,11 @@ header {
   font-style: normal;
 }
 
-#section1, #section2, #section3 {
-  min-height: 100vh; /* Asegura que cada sección ocupe al menos el 100% de la altura de la ventana */
+#section1,
+#section2,
+#section3 {
+  min-height: 100vh;
+  /* Asegura que cada sección ocupe al menos el 100% de la altura de la ventana */
 }
 
 .der {
@@ -131,6 +157,18 @@ nav a:hover {
 
 nav a:hover::after {
   transform: scaleX(1);
+}
+
+nav {
+  display: flex;
+  gap: 10px;
+}
+
+.menu-icon {
+  display: none;
+  /* Ocultar el ícono de hamburguesa inicialmente */
+  font-size: 24px;
+  cursor: pointer;
 }
 
 .cursor-effect {
@@ -180,22 +218,33 @@ nav a:hover::after {
 
 .letra {
   font-size: 100px;
-  transition: transform 0.3s ease; /* Agrega una transición suave */
+  transition: transform 0.3s ease;
+  /* Agrega una transición suave */
 }
 
-.top{
+.top {
   font-size: 20px;
   display: flex;
   flex-direction: column;
 }
 
 .letra:hover {
-  transform: scale(1.2); /* Aumenta el tamaño al 120% */
-  color: white; /* Cambia el color al hacer hover, si deseas */
+  transform: scale(1.2);
+  /* Aumenta el tamaño al 120% */
+  color: white;
+  /* Cambia el color al hacer hover, si deseas */
 }
 
-.descripcion{
+.descripcion {
   display: flex;
+}
+
+.menu-icon {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
 }
 
 /* luna */
@@ -210,6 +259,7 @@ nav a:hover::after {
   0% {
     transform: rotate(0deg);
   }
+
   100% {
     transform: rotate(360deg);
   }
@@ -223,6 +273,7 @@ nav a:hover::after {
     transform: translateY(-100px);
     opacity: 1;
   }
+
   100% {
     transform: translateY(100vh);
     opacity: 0;
@@ -231,18 +282,21 @@ nav a:hover::after {
 
 .cenizas {
   position: absolute;
-  top: 100px; /* Empieza debajo del header */
+  top: 100px;
+  /* Empieza debajo del header */
   left: 0;
   width: 100%;
   height: 100vh;
-  pointer-events: none; /* No afecta a la interacción */
+  pointer-events: none;
+  /* No afecta a la interacción */
   z-index: 0;
   overflow: hidden;
 }
 
 .ceniza {
   position: absolute;
-  background: rgba(255, 255, 255, 1); /* Color gris de las cenizas */
+  background: rgba(255, 255, 255, 1);
+  /* Color gris de las cenizas */
   width: 2px;
   height: 10px;
   bottom: 100%;
@@ -262,46 +316,57 @@ nav a:hover::after {
   left: 10%;
   animation-delay: 0s;
 }
+
 .ceniza:nth-child(2) {
   left: 20%;
   animation-delay: 1s;
 }
+
 .ceniza:nth-child(3) {
   left: 30%;
   animation-delay: 0.5s;
 }
+
 .ceniza:nth-child(4) {
   left: 40%;
   animation-delay: 1.5s;
 }
+
 .ceniza:nth-child(5) {
   left: 50%;
   animation-delay: 2s;
 }
+
 .ceniza:nth-child(6) {
   left: 60%;
   animation-delay: 1s;
 }
+
 .ceniza:nth-child(7) {
   left: 70%;
   animation-delay: 1.25s;
 }
+
 .ceniza:nth-child(8) {
   left: 80%;
   animation-delay: 2.9s;
 }
+
 .ceniza:nth-child(9) {
   left: 90%;
   animation-delay: 2.2s;
 }
+
 .ceniza:nth-child(10) {
   left: 15%;
   animation-delay: 3s;
 }
+
 .ceniza:nth-child(11) {
   left: 55%;
   animation-delay: 1.8s;
 }
+
 .ceniza:nth-child(12) {
   left: 65%;
   animation-delay: 2.2s;
@@ -310,7 +375,7 @@ nav a:hover::after {
 
 /* laslistas */
 
-.enfoques{
+.enfoques {
   height: 62px;
   display: flex;
   font-size: 80px;
@@ -318,15 +383,13 @@ nav a:hover::after {
   overflow: hidden;
 }
 
-ul{
+ul {
   list-style: none;
   animation: movimiento 10s infinite;
 }
 
-ul li{
-  background-image: linear-gradient(
-    90deg, #ffffff, rgb(0, 0, 0) 
-  );
+ul li {
+  background-image: linear-gradient(90deg, #ffffff, rgb(0, 0, 0));
 
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -335,28 +398,51 @@ ul li{
 }
 
 @keyframes movimiento {
-  0% { margin-top: 0;}
-  20% { margin-top: 0;}
+  0% {
+    margin-top: 0;
+  }
 
-  25% { margin-top: -60px;}
-  50% { margin-top: -60px;}
+  20% {
+    margin-top: 0;
+  }
 
-  55% { margin-top: -125px;}
-  80% { margin-top: -125px;}
+  25% {
+    margin-top: -60px;
+  }
 
-  85% { margin-top: -60px;}
-  95% { margin-top: -60px;}
+  50% {
+    margin-top: -60px;
+  }
 
-  100% { margin-top: 0px;}
+  55% {
+    margin-top: -125px;
+  }
+
+  80% {
+    margin-top: -125px;
+  }
+
+  85% {
+    margin-top: -60px;
+  }
+
+  95% {
+    margin-top: -60px;
+  }
+
+  100% {
+    margin-top: 0px;
+  }
 }
 
 
 /* scroll */
 
-.container_mouse{
+.container_mouse {
   margin-top: 5%;
   margin-left: 0px;
 }
+
 .mouse-btn {
   margin: 10px auto;
   width: 40px;
@@ -364,8 +450,10 @@ ul li{
   border: 3px solid rgba(122, 122, 124, 0.2);
   border-radius: 20px;
   display: flex;
-  opacity: 0; /* Inicialmente invisible */
-  animation: fadeIn 1s forwards; /* Animación de aparición */
+  opacity: 0;
+  /* Inicialmente invisible */
+  animation: fadeIn 1s forwards;
+  /* Animación de aparición */
   animation-delay: 4s;
 }
 
@@ -377,10 +465,11 @@ ul li{
   border-radius: 50%;
   margin: auto;
   animation: scrolling13 2s linear infinite;
-  opacity: 0; /* Inicialmente invisible */
+  opacity: 0;
+  /* Inicialmente invisible */
   animation: fadeIn 1s forwards, scrolling13 2s linear infinite;
   animation-delay: 4s;
-  
+
 }
 
 @keyframes scrolling13 {
@@ -409,12 +498,14 @@ ul li{
 
 /* inicio container 2 */
 
-.resto{
+.resto {
   margin-top: 105px;
-  width: 100%; /* Ancho del cuadrado */
-  height: 500%; /* Altura del cuadrado */
-  background: rgb(0,0,0);
-background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(105,57,57,1) 30%, rgba(154,41,41,1) 63%, rgba(195,30,30,1) 100%);
+  width: 100%;
+  /* Ancho del cuadrado */
+  height: 500%;
+  /* Altura del cuadrado */
+  background: rgb(0, 0, 0);
+  background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(105, 57, 57, 1) 30%, rgba(154, 41, 41, 1) 63%, rgba(195, 30, 30, 1) 100%);
 }
 
 .container-containet-tittle {
@@ -435,19 +526,22 @@ background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(105,57,57,1) 30%, rgb
   letter-spacing: 3px;
   cursor: pointer;
   transition: 0.5s;
-  text-shadow: 0 0 5px rgba(117, 28, 28, 0.2), /* Primer desvanecido ligero */
-               0 0 10px rgba(117, 28, 28, 0.2), /* Más fuerte y más lejos */
-               0 0 15px rgba(117, 28, 28, 0.2); /* Más difuso */
+  text-shadow: 0 0 5px rgba(117, 28, 28, 0.2),
+    /* Primer desvanecido ligero */
+    0 0 10px rgba(117, 28, 28, 0.2),
+    /* Más fuerte y más lejos */
+    0 0 15px rgba(117, 28, 28, 0.2);
+  /* Más difuso */
 }
 
 .title-text:hover {
   color: #ffffff;
   text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
-               0 0 20px rgba(255, 255, 255, 0.6),
-               0 0 30px rgba(255, 255, 255, 0.4);
+    0 0 20px rgba(255, 255, 255, 0.6),
+    0 0 30px rgba(255, 255, 255, 0.4);
 }
- 
-.contenido{
+
+.contenido {
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -484,12 +578,12 @@ background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(105,57,57,1) 30%, rgb
   z-index: 1;
 }
 
-.acercade{
+.acercade {
   padding: 20px;
   font-size: 18px;
 }
 
-.fondo{
+.fondo {
   display: flex;
 }
 
@@ -497,47 +591,52 @@ background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(105,57,57,1) 30%, rgb
   position: absolute;
   animation: rotateStars 120s linear infinite;
   z-index: 0;
-  width:80%;
+  width: 80%;
   top: 450px;
 }
+
 #reves {
   position: absolute;
   animation: rotateStarsReverse 200s linear infinite;
   z-index: 0;
   width: 80%;
   top: 450px;
-  
+
 }
+
 @keyframes rotateStars {
   0% {
     transform: rotate(0deg);
   }
+
   100% {
     transform: rotate(360deg);
   }
 }
+
 @keyframes rotateStarsReverse {
   0% {
     transform: rotate(360deg);
   }
+
   100% {
     transform: rotate(0deg);
- }
+  }
 }
 
 /* inicio container 3 */
-.container3{
+.container3 {
   width: 100%;
   height: 18%;
 }
 
-.titulo{
+.titulo {
   display: flex;
   justify-content: center;
   font-size: 20px;
 }
 
-/* From Uiverse.io by samuelfcosta18 */ 
+/* From Uiverse.io by samuelfcosta18 */
 section.card2 {
   position: relative;
   width: 550px;
@@ -551,11 +650,13 @@ section.card2 {
   perspective: 1000px;
   transition: all 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
+
 .card2 svg {
   fill: #000;
   transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   border-radius: 3px;
 }
+
 .card2:hover {
   transform: scale(1.05);
   box-shadow: 0 8px 16px #000000;
@@ -601,12 +702,12 @@ section.card2 {
   line-height: 1.4;
 }
 
-.propositos{
+.propositos {
   font-size: 20px;
   color: #ffffff;
 }
 
-.cardss{
+.cardss {
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -614,7 +715,7 @@ section.card2 {
   height: 100%;
 }
 
-.mision{
+.mision {
   width: 50%;
 }
 
@@ -622,28 +723,32 @@ section.card2 {
   color: rgb(255, 255, 255);
   text-shadow: 0 0 10px rgba(255, 0, 0, 0.8);
   font-size: 50px;
-  transition: transform 0.5s ease; /* Agrega una transición suave */
-}
-.letra2:hover {
-  transform: scale(1.8); /* Aumenta el tamaño al 120% */
-  color: rgb(83, 13, 13); /* Cambia el color al hacer hover, si deseas */
+  transition: transform 0.5s ease;
+  /* Agrega una transición suave */
 }
 
-.yo{
+.letra2:hover {
+  transform: scale(1.8);
+  /* Aumenta el tamaño al 120% */
+  color: rgb(83, 13, 13);
+  /* Cambia el color al hacer hover, si deseas */
+}
+
+.yo {
   border-radius: 100px;
   z-index: 100;
-  
+
 }
 
 /* inicio container 4 */
-.container4{
+.container4 {
   width: 100%;
   height: 18%;
   display: flex;
   flex-direction: column;
 }
 
-/* From Uiverse.io by mohamedkhire */ 
+/* From Uiverse.io by mohamedkhire */
 .card::before {
   border-radius: 50%;
   width: 7rem;
@@ -708,37 +813,39 @@ section.card2 {
   transform: scale(1.1, 1.1);
 }
 
-.cards:hover > .card:not(:hover) {
+.cards:hover>.card:not(:hover) {
   filter: blur(5px);
   transform: scale(0.9, 0.9);
 }
 
-.js{
+.js {
   width: 100px;
   height: 100px;
 }
-.css{
+
+.css {
   width: 80px;
   height: 80px;
   margin-left: 40%;
 }
-.html{
+
+.html {
   margin-left: 30%;
   width: 150px;
   height: 150px;
 }
 
-.arriba{
+.arriba {
   margin-top: -200px;
 }
 
-.targeta{
+.targeta {
   text-decoration: none;
   color: #000;
 }
 
 /* inicio container 5 */
-.container5{
+.container5 {
   margin-top: -1800px;
   width: 100%;
   height: 100%;
@@ -757,7 +864,7 @@ section.card2 {
   flex-direction: column;
 }
 
-.titlee  {
+.titlee {
   text-align: center;
   margin-bottom: 20px;
   font-size: 2rem;
@@ -811,7 +918,8 @@ section.card2 {
 .slide {
   display: none;
   animation: fadeEffect 0.5s ease;
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Agregamos la transición */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  /* Agregamos la transición */
 }
 
 .slide.active {
@@ -820,24 +928,42 @@ section.card2 {
 
 /* Efecto de hover para agrandar el slide */
 .slide:hover {
-  transform: scale(1.05); /* Crece un 5% */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Añade una sombra para más efecto */
+  transform: scale(1.05);
+  /* Crece un 5% */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  /* Añade una sombra para más efecto */
 }
 
 /* Otros estilos previamente definidos */
 @keyframes fadeEffect {
-  from { opacity: 0.7; }
-  to { opacity: 1; }
+  from {
+    opacity: 0.7;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
+
 /* Efecto de desvanecimiento para cambiar entre slides */
 @keyframes fadeOutEffect {
-  from { opacity: 1; }
-  to { opacity: 0; }
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
 }
 
 @keyframes fadeInEffect {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 .fade-out {
@@ -915,16 +1041,16 @@ section.card2 {
 
 @media (max-width: 768px) {
   .slider-container {
-      flex-direction: column;
+    flex-direction: column;
   }
 
   .slider-preview {
-      width: 100%;
-      margin-bottom: 10px;
+    width: 100%;
+    margin-bottom: 10px;
   }
 
   .slider-main {
-      width: 100%;
+    width: 100%;
   }
 }
 
@@ -968,17 +1094,271 @@ section.card2 {
 }
 
 @keyframes subtle-glow {
-  0%, 100% {
+
+  0%,
+  100% {
     text-shadow: 0 0 5px rgba(255, 51, 51, 0.1);
   }
+
   50% {
     text-shadow: 0 0 10px rgba(255, 51, 51, 0.2);
   }
 }
 
 /* inicio container 6 */
-.container6{
+.container6 {
   width: 100%;
   height: 70%;
 }
 
+
+
+@media only screen and (max-width: 1280px) {
+  section.card2 {
+    width: 400px;
+    height: 400px;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    perspective: 1000px;
+    transition: all 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+
+  .propositos {
+    font-size: 16px;
+    color: #ffffff;
+  }
+
+  .proposito {
+    font-size: 35px;
+    color: #b9b9b9;
+  }
+
+  .cards .card p.tip {
+    font-size: 60%;
+    font-weight: 700;
+    padding: 20px;
+    margin-top: -20px;
+  }
+
+  .js {
+    width: 100px;
+    height: 100px;
+  }
+
+  .css {
+    width: 60px;
+    height: 60px;
+    margin-left: 40%;
+  }
+
+  .html {
+    margin-left: 30%;
+    width: 100px;
+    height: 100px;
+  }
+
+  .containerr {
+    margin-top: 100px;
+    justify-content: end;
+  }
+
+  .acomodacion {
+    font-size: 13px;
+  }
+}
+
+@media screen and (max-width: 760px) {
+
+  /* todo lo de menus */
+
+  nav {
+    margin-top: 0px;
+    flex-direction: column;
+    background-color: #4b2d2e85;
+    position: absolute;
+    top: 60px;
+    /* Ajusta según el alto de tu header */
+    right: 0;
+    width: 150px;
+    padding: 10px;
+    z-index: 1;
+    transform: translateX(100%);
+    transition: transform 1.3s ease-in-out, opacity 0.3s ease-in-out;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  nav.show {
+    transform: translateX(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .menu-icon {
+    display: block;
+    /* Mostrar el ícono de hamburguesa */
+  }
+
+  .nav a {
+    padding: 0.5rem 0;
+    display: block;
+  }
+
+  header {
+    height: 60px;
+  }
+
+  .logo {
+    width: 40px;
+    height: 40px;
+  }
+
+  /* lo de aboutme */
+
+  .contenido {
+    flex-direction: column;
+
+  }
+
+  .yo {
+    width: 400px;
+    border-radius: 50px;
+  }
+
+  .sobremi {
+    margin-top: 50px;
+  }
+
+  .star1 {
+
+    width: 200%;
+    top: 300px;
+    right: 10%;
+  }
+
+  #reves {
+    width: 200%;
+    top: 300px;
+    right: 10%;
+  }
+
+  /* proposito */
+
+  .container3 {
+    height: 10%;
+  }
+
+  .cardss {
+    flex-direction: column;
+    justify-content: space-around;
+
+  }
+
+  section.card2 {
+    width: 450px;
+    height: 300px;
+  }
+
+  .propositos {
+    font-size: 14px;
+  }
+
+
+
+  .cards .card p.tip {
+    font-size: 60%;
+    font-weight: 700;
+    padding: 20px;
+    margin-top: -20px;
+  }
+
+  .container4 {
+    margin-top: 70px;
+  }
+
+  .cards {
+    flex-direction: column;
+  }
+
+  .resto {
+    height: 1000%;
+  }
+
+  .html {
+    margin-left: 40%;
+  }
+
+  /* proyectos */
+
+  .containerr {
+    margin-top: -2500px;
+  }
+
+  body {
+    background-image: url('public/img/fondo.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* Ajusta el tamaño del fondo */
+    background-attachment: fixed;
+    color: white;
+    height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+    /* Evita el desplazamiento horizontal */
+  }
+
+  html {
+    overflow-x: hidden;
+    /* Asegura que toda la página esté bloqueada en horizontal */
+  }
+
+  .text {
+    width: 200%;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 475px) {
+  .letra {
+    font-size: 60px;
+    transition: transform 0.3s ease;
+    /* Agrega una transición suave */
+  }
+  .text{
+    font-size: 22px;
+  }
+  .enfoques{
+    font-size: 70px;
+  }
+
+  .about{
+    font-size: 60px;
+  }
+  .container-tittle {
+    padding: 15px 0px;
+  }
+
+  .yo{
+    width: 300px ;
+  }
+  .cardd{
+    width: 400px;
+  }
+  .acercade{
+    font-size: 15px;
+  }
+
+  /* proposito */
+
+  section.card2 {
+    width: 350px;
+    height: 350px;
+  }
+
+  .propositos {
+    font-size: 14px;
+  }
+}

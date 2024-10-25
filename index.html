@@ -20,7 +20,7 @@
 <body>
 
   <div class="cenizas">
-    <div id="particles-js">
+    <div id="particles-js" class="lineas">
     </div>
     <div class="ceniza"></div>
     <div class="ceniza"></div>
@@ -36,21 +36,33 @@
     <div class="ceniza"></div>
   </div>
   <div id="section1">
-    <header>
-      <div class="der">
-        <a href=""><img src="public/img/logo.png" alt="marca personal" width="60px" height="50px"></a>
-        <h1></h1>
+    <header class="header">
+      <div class="logo">
+        <a href="#">
+          <img src="public/img/logo.png" alt="marca personal" width="60" height="50" class="logo">
+        </a>
       </div>
-      <nav class="rocknroll-one-regular">
-        <a href="#section1">Inicio</a>
-        <a href="/hoja_vida.pdf" download="hoja_vida.pdf">Hoja de vida</a>
-        <a href="#section2">Acerca de mi</a>
-        <a href="#section3">Proposito</a>
-        <a href="#section4">Habilidades</a>
-        <a href="#section5">Proyectos</a>
-        <a href="#section6">Contacto</a>
+      <nav class="nav rocknroll-one-regular" id="menu">
+        <a href="#section1" class="acomodacion">Inicio</a>
+        <a href="/hoja_vida.pdf" download="hoja_vida.pdf" class="acomodacion">Hoja de vida</a>
+        <a href="#section2" class="acomodacion">Acerca de mí</a>
+        <a href="#section3" class="acomodacion">Propósito</a>
+        <a href="#section4" class="acomodacion">Habilidades</a>
+        <a href="#section5" class="acomodacion">Proyectos</a>
+        <a href="#section6" class="acomodacion">Contacto</a>
       </nav>
+      <button class="menu-icon" id="menu-icon" aria-label="Abrir menú">
+        <span class="sr-only"></span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
     </header>
+
+
     <div class="container1">
       <!-- <img src="public/img/luna.png" alt="luna" class="luna"> -->
       <!-- <img src="public/img/luna.png" alt="luna" class="luna"> -->
@@ -94,7 +106,7 @@
           <h2 class="temblor letra3">予</h2>
           <h2 class="temblor letra3">界</h2>
         </div>
-          
+
       </div>
 
 
@@ -116,7 +128,7 @@
     <div class="container2" id="section2">
       <div class="container-containet-tittle">
         <div class="container-tittle">
-          <h2 class="title-text">Acerca de mi</h2>
+          <h2 class="title-text about">Acerca de mi</h2>
         </div>
       </div>
       <div class="contenido">
@@ -158,7 +170,7 @@
           </path>
           </svg>
           <div class="card2__content">
-            <p class="card2__title propositos">Mi misión</p>
+            <p class="card2__title proposito">Mi misión</p>
             <p class="card2__description propositos mukta-malar-extralight">
               Como desarrollador de software, me enfoco en crear soluciones tecnológicas eficientes que mejoren la vida
               de las personas y optimicen los procesos empresariales. Me esfuerzo por entender las necesidades de cada
@@ -168,14 +180,14 @@
               los clientes, combinando habilidades técnicas con una mentalidad competitiva y resiliente. </p>
           </div>
         </section>
-        <section id="card1" class="card2">          
+        <section id="card1" class="card2">
           <path
             d="M.002 3a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-12a2 2 0 0 1-2-2V3zm1 9v1a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V9.5l-3.777-1.947a.5.5 0 0 0-.577.093l-3.71 3.71-2.66-1.772a.5.5 0 0 0-.63.062L1.002 12zm5-6.5a1.5 1.5 0 1 0-3 0 1.5 1.5 0 0 0 3 0z">
           </path>
-          <img src="public/img/visión.png"  class="mision" alt="vision">
+          <img src="public/img/visión.png" class="mision" alt="vision">
           </svg>
           <div class="card2__content">
-            <p class="card2__title propositos"> Mi visión</p>
+            <p class="card2__title proposito"> Mi visión</p>
             <p class="card2__description propositos mukta-malar-extralight">
               Aspiro a lograr reconocimiento global creando proyectos innovadores que transformen el mundo tecnológico.
               Mi meta es trabajar en grandes empresas, y luego fundar mi propio producto o empresa. Me enfoco en aportar
@@ -194,7 +206,7 @@
         <h1 class="neonderthaw-regular">Habilidades</h1>
       </div>
       <div class="cards">
-
+        
         <div class="card green">
           <a class="targeta" target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/HTML">
             <img src="/public/img/html.png" alt="" class="html">
@@ -321,10 +333,11 @@
   </div>
   <br id="section5">
   <div class="container5">
-    <div class="titulo" id="Habilidades">
-      <h1 class="titulo-proyectos">Proyectos</h1>
-    </div>
+
     <div class="containerr">
+      <div class="titulo" id="Habilidades">
+        <h1 class="titulo-proyectos">Proyectos</h1>
+      </div>
       <div class="slider-container" id="sliderContainer">
         <div class="slider-preview prev" id="prevPreview">
           <img src="/placeholder.svg?height=200&width=300" alt="Proyecto anterior" class="preview-image">

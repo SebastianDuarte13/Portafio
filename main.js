@@ -8,6 +8,32 @@ document.addEventListener('mousemove', (e) => {
     }
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+    const menuIcon = document.getElementById('menu-icon');
+    const menu = document.getElementById('menu');
+
+    menuIcon.addEventListener('click', () => {
+        menu.classList.toggle('show');
+        menuIcon.setAttribute('aria-expanded', menu.classList.contains('show'));
+    });
+
+    // Cerrar el menú si se hace clic fuera de él
+    document.addEventListener('click', (event) => {
+        if (!menu.contains(event.target) && !menuIcon.contains(event.target)) {
+            menu.classList.remove('show');
+            menuIcon.setAttribute('aria-expanded', 'false');
+        }
+    });
+
+    // Ajustar el menú en caso de cambio de tamaño de pantalla
+    window.addEventListener('resize', () => {
+        if (window.innerWidth > 780) {
+            menu.classList.remove('show');
+            menuIcon.setAttribute('aria-expanded', 'false');
+        }
+    });
+});
+
 function createCursorTrail(x, y) {
     const cursorTrail = document.createElement('div');
     cursorTrail.classList.add('cursor-effect');
@@ -195,7 +221,7 @@ document.addEventListener('DOMContentLoaded', () => {
 // de los proyectos
 
 const proyectos = [
-    { id: 1, titulo: "Proyecto 1", descripcion: "Este proyecto se enfonco en el desarrollo de plantillas css y volviendolas responsivas una y cada una con un menu intuitivo que permite navegar una y cada uda de estas pequeñas landing pages. Este proyecto se llevo acabo con mi colega samuel Ospina", imagen: "public/img/landing-pages.png?height=400&width=600", link: "https://landingpagessamuel.netlify.app/", target: "_blank" },
+    { id: 1, titulo: "Proyecto 1", descripcion: "Este proyecto se enfonco en el desarrollo de plantillas css y volviendolas responsivas una y cada una con un menu intuitivo que permite navegar una y cada uda de estas pequeñas landing pages. Este proyecto se llevo acabo con mi colega samuel Ospina", imagen: "public\img\landing-pages.png?height=400&width=600", link: "https://landingpagessamuel.netlify.app/", target: "_blank" },
     { id: 2, titulo: "Proyecto 2", descripcion: "En este proyecto se desarrolo un borrador para presentarle a un cliente de un catalogo de su propio restaurante para mostrar los servicios que ofrece, de manera web y movil siendo responsivo", imagen: "public/img/catalogo-burger.png", link: "https://trabajo-reserreccion.vercel.app/" },
     { id: 3, titulo: "Proyecto 3", descripcion: "Este proyecto utiliza las habilidades de HTML, CSS y JavaScript para crear un pequeño formulario para registrar un heroe y almacenarlo en una base de datos con una imagen de dicho heroe", imagen: "public/img/registro-heroes.png", link: "https://super-heros-five.vercel.app/" },
     { id: 4, titulo: "Proyecto 4", descripcion: "Para este proyecto se realizo una imitacion de la famosa app cuanto cuesta mi app, con la que se replico de la mejor manera utilizando web-componets para tener una mejor compilacion y desarrollo profesional.", imagen: "public/img/cuantocuestamiapp.png", link: "https://trabajo-js-chi.vercel.app/" },
