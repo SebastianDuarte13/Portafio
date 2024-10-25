@@ -365,6 +365,65 @@ updateSlide();
 startAutoSlide();
 
 
+// form
+// document.addEventListener('DOMContentLoaded', function() {
+//     const form = document.getElementById('contactForm');
+//     const submitBtn = document.getElementById('submitBtn');
+//     const respuestaDiv = document.getElementById('respuesta');
+
+//     form.addEventListener('submit', function(e) {
+//         e.preventDefault();
+        
+//         // Deshabilitar el botón y cambiar el texto
+//         submitBtn.disabled = true;
+//         submitBtn.textContent = 'Enviando...';
+        
+//         // Limpiar mensaje de respuesta anterior
+//         respuestaDiv.textContent = '';
+//         respuestaDiv.className = 'respuesta';
+
+//         // Obtener los datos del formulario
+//         const formData = new FormData(form);
+//         const data = {
+//             nombre: formData.get('nombre'),
+//             email: formData.get('email'),
+//             mensaje: formData.get('mensaje')
+//         };
+
+//         // Enviar los datos a la API
+//         fetch('https://665a2b49003609eda45d40be.mockapi.io/contacto', {
+//             method: 'POST',
+//             headers: {
+//                 'Content-Type': 'application/json',
+//             },
+//             body: JSON.stringify(data)
+//         })
+//         .then(response => {
+//             if (!response.ok) {
+//                 throw new Error('Error en la respuesta del servidor');
+//             }
+//             return response.json();
+//         })
+//         .then(data => {
+//             // Mostrar mensaje de éxito
+//             respuestaDiv.textContent = '¡Gracias por contactarnos! Te responderemos pronto.';
+//             respuestaDiv.classList.add('exito');
+//             form.reset(); // Limpiar el formulario
+//         })
+//         .catch(error => {
+//             // Mostrar mensaje de error
+//             respuestaDiv.textContent = 'Hubo un error al enviar el formulario. Por favor, inténtalo de nuevo.';
+//             respuestaDiv.classList.add('error');
+//         })
+//         .finally(() => {
+//             // Reactivar el botón y restaurar el texto
+//             submitBtn.disabled = false;
+//             submitBtn.textContent = 'Enviar';
+//         });
+//     });
+// });
+
+
 // particulas del inicio
 
 /* -----------------------------------------------

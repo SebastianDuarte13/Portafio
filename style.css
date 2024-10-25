@@ -1112,6 +1112,84 @@ section.card2 {
 }
 
 
+/* .container {
+  width: 50%;
+  margin: 2rem auto;
+  padding: 2rem;
+  border-radius: 5px;
+}
+
+.alinea{
+  display: flex;
+  
+  justify-content: space-between;
+}
+
+.letr {
+  text-align: center;
+  color: #333;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.labe {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #000;
+}
+
+.inpu, textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #dddddd49;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+textarea {
+  height: 100px;
+}
+
+.butto {
+  display: block;
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+button:disabled {
+  background-color: #cccccc59;
+  cursor: not-allowed;
+}
+
+.respuesta {
+  margin-top: 1rem;
+  padding: 1rem;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.exito {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.error {
+  background-color: #f8d7da;
+  color: #721c24;
+} */
 
 @media only screen and (max-width: 1280px) {
   section.card2 {
