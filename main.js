@@ -1,10 +1,9 @@
 document.addEventListener('mousemove', (e) => {
     const header = document.querySelector('header');
-    const headerRect = header.getBoundingClientRect(); // Obtiene la posición del header
+    const headerRect = header.getBoundingClientRect();
 
-    // Verifica si el cursor está fuera del header
     if (e.clientY < headerRect.top || e.clientY > headerRect.bottom) {
-        createCursorTrail(e.clientX, e.clientY);
+        createCursorTrail(e.clientX, e.clientY, 500); // Cambia el número de clones aquí
     }
 });
 
