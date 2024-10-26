@@ -1112,7 +1112,7 @@ section.card2 {
 }
 
 
-/* .container {
+.container {
   width: 50%;
   margin: 2rem auto;
   padding: 2rem;
@@ -1121,8 +1121,7 @@ section.card2 {
 
 .alinea{
   display: flex;
-  
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .letr {
@@ -1189,7 +1188,107 @@ button:disabled {
 .error {
   background-color: #f8d7da;
   color: #721c24;
-} */
+}
+
+.container {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  width: 100%;
+  max-width: 400px;
+  transform: translateY(50px);
+  transition: all 0.5s ease-out;
+}
+
+.container.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+h2 {
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2.5em;
+  animation: float 6s ease-in-out infinite;
+}
+
+.form-group {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-bottom: 2px solid #ffffff;
+  background: transparent;
+  color: #ffffff;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+input:focus, textarea:focus {
+  outline: none;
+  border-bottom-color: #23a6d5;
+}
+
+label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px;
+  color: #ffffff;
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+
+input:focus ~ label,
+input:valid ~ label,
+textarea:focus ~ label,
+textarea:valid ~ label {
+  top: -20px;
+  font-size: 12px;
+  color: #23a6d5;
+}
+
+.buttonnn {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 50px;
+  background: linear-gradient(45deg, #ee7752, #e73c7e);
+  color: #ffffff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.buttonnn:hover {
+  background: linear-gradient(45deg, #e73c7e, #23a6d5);
+  transform: scale(1.05);
+}
+
+@media (max-width: 480px) {
+  .container {
+      padding: 20px;
+  }
+}
+@keyframes gradient {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+
+@keyframes float {
+  0% {transform: translateY(0px);}
+  50% {transform: translateY(-20px);}
+  100% {transform: translateY(0px);}
+}
 
 @media only screen and (max-width: 1280px) {
   section.card2 {

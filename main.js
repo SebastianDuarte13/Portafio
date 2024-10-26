@@ -366,62 +366,40 @@ startAutoSlide();
 
 
 // form
-// document.addEventListener('DOMContentLoaded', function() {
-//     const form = document.getElementById('contactForm');
-//     const submitBtn = document.getElementById('submitBtn');
-//     const respuestaDiv = document.getElementById('respuesta');
+document.addEventListener('DOMContentLoaded', () => {
+    const container = document.querySelector('.container');
+    container.classList.add('show');
 
-//     form.addEventListener('submit', function(e) {
-//         e.preventDefault();
+    const form = document.getElementById('contactForm');
+    const inputs = form.querySelectorAll('input, textarea');
+
+    inputs.forEach(input => {
+        input.addEventListener('focus', () => {
+            input.parentElement.style.transform = 'translateX(10px)';
+        });
+
+        input.addEventListener('blur', () => {
+            input.parentElement.style.transform = 'translateX(0)';
+        });
+    });
+
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const formData = new FormData(form);
+        const data = Object.fromEntries(formData);
+        console.log('Form submitted:', data);
         
-//         // Deshabilitar el botón y cambiar el texto
-//         submitBtn.disabled = true;
-//         submitBtn.textContent = 'Enviando...';
-        
-//         // Limpiar mensaje de respuesta anterior
-//         respuestaDiv.textContent = '';
-//         respuestaDiv.className = 'respuesta';
+        // Animate button on submit
+        const button = form.querySelector('button');
+        button.style.transform = 'scale(0.95)';
+        setTimeout(() => {
+            button.style.transform = 'scale(1)';
+        }, 200);
 
-//         // Obtener los datos del formulario
-//         const formData = new FormData(form);
-//         const data = {
-//             nombre: formData.get('nombre'),
-//             email: formData.get('email'),
-//             mensaje: formData.get('mensaje')
-//         };
-
-//         // Enviar los datos a la API
-//         fetch('https://665a2b49003609eda45d40be.mockapi.io/contacto', {
-//             method: 'POST',
-//             headers: {
-//                 'Content-Type': 'application/json',
-//             },
-//             body: JSON.stringify(data)
-//         })
-//         .then(response => {
-//             if (!response.ok) {
-//                 throw new Error('Error en la respuesta del servidor');
-//             }
-//             return response.json();
-//         })
-//         .then(data => {
-//             // Mostrar mensaje de éxito
-//             respuestaDiv.textContent = '¡Gracias por contactarnos! Te responderemos pronto.';
-//             respuestaDiv.classList.add('exito');
-//             form.reset(); // Limpiar el formulario
-//         })
-//         .catch(error => {
-//             // Mostrar mensaje de error
-//             respuestaDiv.textContent = 'Hubo un error al enviar el formulario. Por favor, inténtalo de nuevo.';
-//             respuestaDiv.classList.add('error');
-//         })
-//         .finally(() => {
-//             // Reactivar el botón y restaurar el texto
-//             submitBtn.disabled = false;
-//             submitBtn.textContent = 'Enviar';
-//         });
-//     });
-// });
+        // Here you would typically send the data to a server
+        alert('Formulario enviado con éxito!');
+    });
+});
 
 
 // particulas del inicio
