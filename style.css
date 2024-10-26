@@ -1409,7 +1409,11 @@ textarea:valid ~ label {
   /* proyectos */
 
   .containerr {
-    margin-top: 100px;
+    margin-top: 300px;
+  }
+
+  .tipi{
+    margin-bottom: 200px;
   }
 
   body {
