@@ -302,6 +302,8 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
+
+
 // particulas del inicio
 
 /* -----------------------------------------------
