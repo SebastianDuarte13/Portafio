@@ -1,0 +1,351 @@
+.hero-section {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+  overflow: hidden;
+  padding-top: 80px;
+}
+
+.particles-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.cenizas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.ceniza {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  filter: blur(1px);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 3;
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.nombre {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.japanese-text {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.temblor {
+  font-size: 3rem;
+  color: #0053a5;
+  text-shadow: 0 0 20px rgba(0, 83, 165, 0.5);
+  animation: temblor 2s infinite;
+}
+
+@keyframes temblor {
+  0%, 100% { transform: translateY(0px); }
+  25% { transform: translateY(-5px); }
+  50% { transform: translateY(0px); }
+  75% { transform: translateY(-3px); }
+}
+
+.letra3 {
+  font-family: 'Yeseva One', serif;
+}
+
+.animated-text-container {
+  margin: 2rem 0;
+}
+
+.animated-text #text {
+  font-size: 2.5rem;
+  color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  letter-spacing: 2px;
+}
+
+.descripcion {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 2rem 0;
+  flex-wrap: wrap;
+}
+
+.letra {
+  font-size: 4rem;
+  font-weight: 700;
+  color: transparent;
+  background: linear-gradient(45deg, #0053a5, #00aaff, #ffffff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  text-shadow: 0 0 30px rgba(0, 83, 165, 0.3);
+  transition: all 0.3s ease;
+}
+
+.letra:hover {
+  transform: scale(1.1) rotate(5deg);
+  text-shadow: 0 0 40px rgba(0, 83, 165, 0.8);
+}
+
+.enfoques {
+  margin: 2rem 0;
+}
+
+.enfoques ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.enfoques li {
+  font-size: 1.5rem;
+  color: #ffffff;
+  padding: 1rem 2rem;
+  background: rgba(0, 83, 165, 0.1);
+  border: 2px solid rgba(0, 83, 165, 0.3);
+  border-radius: 25px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.enfoques li::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  transition: left 0.5s ease;
+}
+
+.enfoques li:hover {
+  transform: translateY(-5px);
+  border-color: #0053a5;
+  box-shadow: 0 10px 30px rgba(0, 83, 165, 0.3);
+}
+
+.enfoques li:hover::before {
+  left: 100%;
+}
+
+.social-links {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: rgba(0, 83, 165, 0.1);
+  border: 2px solid rgba(0, 83, 165, 0.3);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.social-link::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at center, rgba(0, 83, 165, 0.2) 0%, transparent 70%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.social-link:hover::before {
+  opacity: 1;
+}
+
+.social-link:hover {
+  border-color: #0053a5;
+  box-shadow: 0 0 30px rgba(0, 83, 165, 0.5);
+}
+
+.social-link svg {
+  width: 30px;
+  height: 30px;
+  transition: all 0.3s ease;
+  z-index: 1;
+  position: relative;
+}
+
+.social-link:hover svg {
+  transform: scale(1.2);
+}
+
+.linkedin:hover {
+  border-color: #0077b5;
+  box-shadow: 0 0 30px rgba(0, 119, 181, 0.5);
+}
+
+.github:hover {
+  border-color: #333;
+  box-shadow: 0 0 30px rgba(51, 51, 51, 0.5);
+}
+
+.instagram:hover {
+  border-color: #e4405f;
+  box-shadow: 0 0 30px rgba(228, 64, 95, 0.5);
+}
+
+.bottom-japanese {
+  margin-top: 2rem;
+}
+
+.scroll-indicator {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+}
+
+.mouse-btn {
+  width: 30px;
+  height: 50px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 25px;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.mouse-btn:hover {
+  border-color: #0053a5;
+  box-shadow: 0 0 20px rgba(0, 83, 165, 0.3);
+}
+
+.mouse-scroll {
+  width: 4px;
+  height: 10px;
+  background: #ffffff;
+  border-radius: 2px;
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: scroll 2s infinite;
+}
+
+@keyframes scroll {
+  0% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(0);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(15px);
+  }
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 100px 1rem 2rem;
+  }
+
+  .japanese-text {
+    gap: 0.5rem;
+  }
+
+  .temblor {
+    font-size: 2rem;
+  }
+
+  .animated-text #text {
+    font-size: 1.5rem;
+  }
+
+  .descripcion {
+    gap: 0.2rem;
+  }
+
+  .letra {
+    font-size: 2.5rem;
+  }
+
+  .enfoques ul {
+    gap: 1rem;
+  }
+
+  .enfoques li {
+    font-size: 1.2rem;
+    padding: 0.8rem 1.5rem;
+  }
+
+  .social-links {
+    gap: 1rem;
+  }
+
+  .social-link {
+    width: 50px;
+    height: 50px;
+  }
+
+  .social-link svg {
+    width: 25px;
+    height: 25px;
+  }
+}
+
+@media (max-width: 480px) {
+  .letra {
+    font-size: 1.8rem;
+  }
+
+  .animated-text #text {
+    font-size: 1.2rem;
+  }
+
+  .temblor {
+    font-size: 1.5rem;
+  }
+
+  .enfoques li {
+    font-size: 1rem;
+    padding: 0.6rem 1rem;
+  }
+}
