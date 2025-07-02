@@ -98,7 +98,6 @@
   color: white;
   text-decoration: none;
   font-size: 1.1rem;
-  transition: all 0.3s ease;
 }
 
 .social-link:hover {
@@ -193,24 +192,23 @@
 }
 
 /* Responsive Design */
+@media (max-width: 992px) {
+  .footer-content {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
 @media (max-width: 768px) {
   .footer-content {
     grid-template-columns: 1fr;
-    gap: 30px;
     text-align: center;
   }
-  
-  .footer-bottom-content {
-    flex-direction: column;
-    gap: 20px;
-    text-align: center;
-  }
-  
-  .footer-actions {
+
+  .social-links {
     justify-content: center;
   }
-  
-  .social-links {
+
+  .contact-info p {
     justify-content: center;
   }
 }

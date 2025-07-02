@@ -1,0 +1,152 @@
+/* Utilidades de Responsividad para el Portafolio */
+
+/* Grid responsivo */
+.responsive-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+.responsive-grid-small {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+
+.responsive-grid-large {
+  display: grid;
+  gap: 2.5rem;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+}
+
+/* Flexbox responsivo */
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Espaciado responsivo */
+.responsive-margin {
+  margin: clamp(1rem, 3vw, 2rem);
+}
+
+.responsive-padding {
+  padding: clamp(1rem, 3vw, 2rem);
+}
+
+/* Texto responsivo */
+.responsive-text-xl {
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+}
+
+.responsive-text-lg {
+  font-size: clamp(1.25rem, 3vw, 1.75rem);
+}
+
+.responsive-text-md {
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+}
+
+.responsive-text-sm {
+  font-size: clamp(0.875rem, 2vw, 1rem);
+}
+
+/* Ancho y altura responsivos */
+.responsive-width {
+  width: 100%;
+  max-width: min(90vw, 1200px);
+}
+
+.responsive-height {
+  height: clamp(300px, 50vh, 600px);
+}
+
+/* Imágenes responsivas */
+.responsive-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.responsive-image-contain {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Margen negativo para compensar el espaciado del contenedor */
+.negative-margin {
+  margin: 0 calc(-1 * var(--container-padding));
+}
+
+/* Ocultar/mostrar basado en breakpoints */
+@media (max-width: 1200px) {
+  .hide-on-lg {
+    display: none !important;
+  }
+  
+  .show-on-lg {
+    display: block !important;
+  }
+}
+
+@media (max-width: 992px) {
+  .hide-on-md {
+    display: none !important;
+  }
+  
+  .show-on-md {
+    display: block !important;
+  }
+  
+  .responsive-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .hide-on-sm {
+    display: none !important;
+  }
+  
+  .show-on-sm {
+    display: block !important;
+  }
+  
+  .responsive-grid {
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  }
+  
+  .flex-container {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 576px) {
+  .hide-on-xs {
+    display: none !important;
+  }
+  
+  .show-on-xs {
+    display: block !important;
+  }
+  
+  .responsive-grid, 
+  .responsive-grid-small,
+  .responsive-grid-large {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Ajustes para dispositivos de alta densidad de píxeles */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  body {
+    -webkit-font-smoothing: subpixel-antialiased;
+  }
+}

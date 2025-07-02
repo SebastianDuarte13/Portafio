@@ -199,6 +199,12 @@
 }
 
 /* Responsivo */
+@media (max-width: 1200px) {
+    .purpose-cards {
+        grid-template-columns: 1fr;
+    }
+}
+
 @media (max-width: 1024px) {
   .purpose-cards {
     grid-template-columns: 1fr;
@@ -220,7 +226,7 @@
   }
 
   .purpose-letter {
-    font-size: 2.5rem;
+    font-size: 3rem;
   }
 
   .purpose-card {

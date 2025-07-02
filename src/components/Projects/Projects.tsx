@@ -62,6 +62,9 @@ const Projects: React.FC = () => {
             onClick={prevProject}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
           >
             <img 
               src={prevProjectData.image} 
@@ -75,8 +78,11 @@ const Projects: React.FC = () => {
             <motion.button 
               className="nav-button prev-btn"
               onClick={prevProject}
-              whileHover={{ scale: 1.1 }}
+              whileHover={{ scale: 1.1, backgroundColor: 'rgba(0, 83, 165, 0.4)' }}
               whileTap={{ scale: 0.9 }}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.3, delay: 0.1 }}
               aria-label="Proyecto anterior"
             >
               &lt;
@@ -97,6 +103,7 @@ const Projects: React.FC = () => {
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="project-link"
+                    title={`Visitar el proyecto ${currentProject.title}`}
                   >
                     <motion.img 
                       src={currentProject.image} 
@@ -114,7 +121,13 @@ const Projects: React.FC = () => {
                     {currentProject.technologies && (
                       <div className="technologies">
                         {currentProject.technologies.map((tech) => (
-                          <span key={tech} className="tech-tag">{tech}</span>
+                          <motion.span 
+                            key={tech} 
+                            className="tech-tag"
+                            whileHover={{ y: -3, boxShadow: '0 5px 10px rgba(0, 0, 0, 0.2)' }}
+                          >
+                            {tech}
+                          </motion.span>
                         ))}
                       </div>
                     )}
@@ -126,8 +139,11 @@ const Projects: React.FC = () => {
             <motion.button 
               className="nav-button next-btn"
               onClick={nextProject}
-              whileHover={{ scale: 1.1 }}
+              whileHover={{ scale: 1.1, backgroundColor: 'rgba(0, 83, 165, 0.4)' }}
               whileTap={{ scale: 0.9 }}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.3, delay: 0.1 }}
               aria-label="Proyecto siguiente"
             >
               &gt;
@@ -139,6 +155,9 @@ const Projects: React.FC = () => {
             onClick={nextProject}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
           >
             <img 
               src={nextProjectData.image} 
@@ -157,16 +176,29 @@ const Projects: React.FC = () => {
               onClick={() => goToProject(index)}
               whileHover={{ scale: 1.2 }}
               whileTap={{ scale: 0.8 }}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.3, delay: 0.1 * index }}
               aria-label={`Ir al proyecto ${index + 1}`}
             />
           ))}
         </div>
 
-        <div className="auto-play-indicator">
-          <div className={`play-icon ${isAutoPlaying ? 'playing' : 'paused'}`}>
+        <motion.div 
+          className="auto-play-indicator"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.5 }}
+        >
+          <motion.div 
+            className={`play-icon ${isAutoPlaying ? 'playing' : 'paused'}`}
+            onClick={() => setIsAutoPlaying(!isAutoPlaying)}
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+          >
             {isAutoPlaying ? '⏸️' : '▶️'}
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </div>
     </section>
   );

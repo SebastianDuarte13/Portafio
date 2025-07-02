@@ -1,68 +1,231 @@
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Poppins', system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background-color: #0a0a0a;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  
+  /* Variables CSS para diseño responsivo */
+  --max-width: 1300px;
+  --container-padding: 2rem;
+  --header-height: 70px;
+  --font-size-base: 16px;
+  --section-spacing: 100px;
+  --border-radius: 12px;
+  
+  /* Variables de color */
+  --color-primary: #0053a5;
+  --color-primary-light: #00aaff;
+  --color-secondary: #646cff;
+  --color-dark: #0a0a0a;
+  --color-gray: #666666;
+  --color-light-gray: #e0e0e0;
+  --color-white: #ffffff;
+  
+  /* Variables de transición */
+  --transition-fast: 0.3s ease;
+  --transition-normal: 0.5s ease;
+  --transition-slow: 0.8s ease;
 }
 
 a {
   font-weight: 500;
-  color: #646cff;
+  color: var(--color-secondary);
   text-decoration: inherit;
+  transition: color var(--transition-fast);
 }
+
 a:hover {
-  color: #535bf2;
+  color: var(--color-primary-light);
 }
 
 body {
   margin: 0;
+  padding: 0;
   display: flex;
-  place-items: center;
+  flex-direction: column;
   min-width: 320px;
   min-height: 100vh;
+  overflow-x: hidden;
+  background-color: var(--color-dark);
+  font-size: var(--font-size-base);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.2;
+  margin-bottom: 1rem;
 }
 
 h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  font-weight: 700;
+}
+
+h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 600;
+}
+
+h3 {
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  font-weight: 600;
 }
 
 button {
-  border-radius: 8px;
+  border-radius: var(--border-radius);
   border: 1px solid transparent;
   padding: 0.6em 1.2em;
-  font-size: 1em;
+  font-size: clamp(0.9rem, 2vw, 1rem);
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: rgba(26, 26, 26, 0.8);
   cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  transition: all var(--transition-fast);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
+button:hover {
+  border-color: var(--color-primary-light);
+  background-color: rgba(26, 26, 26, 1);
+  transform: translateY(-2px);
+}
+
+button:active {
+  transform: translateY(1px);
+}
+
+button:focus,
+button:focus-visible {
+  outline: 3px solid rgba(0, 170, 255, 0.3);
+  outline-offset: 2px;
+}
+
+/* Clases de utilidad responsivas */
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+}
+
+/* Estilos responsivos para secciones */
+section {
+  padding: 80px 0;
+}
+
+/* Ocultamiento responsivo */
+.hide-on-mobile {
+  display: block;
+}
+
+.show-on-mobile {
+  display: none;
+}
+
+/* Media Queries */
+@media (max-width: 1400px) {
+  :root {
+    --container-padding: 1.5rem;
+    --section-spacing: 80px;
+  }
+}
+
+@media (max-width: 1200px) {
+  :root {
+    --max-width: 1140px;
+  }
+}
+
+@media (max-width: 992px) {
+  :root {
+    --max-width: 960px;
+    --container-padding: 1.5rem;
+    --section-spacing: 70px;
+    --font-size-base: 15px;
+  }
+  
+  section {
+    padding: 60px 0;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --max-width: 720px;
+    --container-padding: 1rem;
+    --section-spacing: 60px;
+    --header-height: 60px;
+  }
+  
+  section {
+    padding: 50px 0;
+  }
+  
+  .hide-on-mobile {
+    display: none;
+  }
+  
+  .show-on-mobile {
+    display: block;
+  }
+}
+
+@media (max-width: 576px) {
+  :root {
+    --max-width: 540px;
+    --container-padding: 1rem;
+    --section-spacing: 50px;
+    --font-size-base: 14px;
+  }
+  
+  section {
+    padding: 40px 0;
+  }
+  
+  h1 {
+    font-size: clamp(2rem, 8vw, 2.5rem);
+  }
+  
+  h2 {
+    font-size: clamp(1.75rem, 6vw, 2rem);
+  }
+  
+  h3 {
+    font-size: clamp(1.5rem, 5vw, 1.75rem);
+  }
+}
+
+/* Modo claro (opcional) */
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
     background-color: #ffffff;
+    
+    /* Actualizar variables de color para modo claro */
+    --color-dark: #ffffff;
+    --color-gray: #666666;
+    --color-light-gray: #333333;
+    --color-white: #213547;
   }
+  
   a:hover {
-    color: #747bff;
+    color: #0066cc;
   }
+  
   button {
-    background-color: #f9f9f9;
+    background-color: #f0f0f0;
+  }
+  
+  button:hover {
+    background-color: #e0e0e0;
   }
 }

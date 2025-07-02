@@ -246,3 +246,22 @@ Este proyecto está bajo la Licencia MIT. Ver `LICENSE` para más detalles.
   <p>Hecho con ❤️ por Sebastian Duarte</p>
   <p>© 2025 Todos los derechos reservados</p>
 </div>
+
+## Responsive Design
+
+This portfolio is fully responsive and should display correctly on a wide range of devices, from mobile phones to desktop computers. The responsive design is achieved using CSS media queries to adjust the layout and styling based on the screen size.
+
+### Breakpoints
+
+The following breakpoints are used in the CSS to target different screen sizes:
+
+-   **992px:** For tablets and small desktops.
+-   **768px:** For landscape phones and portrait tablets.
+-   **480px:** For portrait phones.
+
+### Key Responsive Features
+
+-   **Navigation:** The navigation menu collapses into a hamburger menu on smaller screens.
+-   **Grid Layouts:** The multi-column grid layouts in the "About", "Projects", "Purpose", and "Skills" sections stack into a single column on smaller screens.
+-   **Font Sizes:** Font sizes are adjusted for better readability on smaller screens.
+-   **Images:** Images are scaled to fit their containers.

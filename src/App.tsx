@@ -10,6 +10,7 @@ import Purpose from './components/Purpose/Purpose';
 import Skills from './components/Skills/Skills';
 import Loading from './components/UI/Loading';
 import './styles/GlobalStyles.css';
+import './styles/ResponsiveUtils.css';
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
