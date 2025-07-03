@@ -285,12 +285,14 @@
 /* Responsivo */
 @media (max-width: 768px) {
   .hero-section {
-    padding: 100px 1rem 2rem;
+    padding: 50px 1rem 2rem;
   }
 
   .japanese-text {
     gap: 0.5rem;
+    margin-top: -30px;
   }
+ 
 
   .temblor {
     font-size: 2rem;
