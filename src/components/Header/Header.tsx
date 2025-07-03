@@ -42,7 +42,7 @@ const Header: React.FC = () => {
         <img src="/img/logo.png" alt="Marca personal" width="55" height="50" />
       </div>
       
-      <nav className={`nav rocknroll-one-regular ${isMenuOpen ? 'show' : ''}`}>
+      <nav  className={`nav rocknroll-one-regular  ${isMenuOpen ? 'show' : ''}`}>
         <a 
           href="/hoja_vida.pdf" 
           download="hoja_vida.pdf" 
@@ -52,37 +52,37 @@ const Header: React.FC = () => {
           Hoja de vida
         </a>
         <button 
-          className="nav-link nav-button"
+          className="nav-link "
           onClick={() => handleLinkClick('hero')}
         >
           Inicio
         </button>
         <button 
-          className="nav-link nav-button"
+          className="nav-link "
           onClick={() => handleLinkClick('about')}
         >
           Acerca de mí
         </button>
         <button 
-          className="nav-link nav-button"
+          className="nav-link "
           onClick={() => handleLinkClick('purpose')}
         >
           Propósito
         </button>
         <button 
-          className="nav-link nav-button"
+          className="nav-link "
           onClick={() => handleLinkClick('skills')}
         >
           Habilidades
         </button>
         <button 
-          className="nav-link nav-button"
+          className="nav-link "
           onClick={() => handleLinkClick('projects')}
         >
           Proyectos
         </button>
         <button 
-          className="nav-link nav-button"
+          className="nav-link "
           onClick={() => handleLinkClick('contact')}
         >
           Contacto

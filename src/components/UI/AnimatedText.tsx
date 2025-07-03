@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 
 const AnimatedText: React.FC = () => {
-  const [text, setText] = useState("こんにちはこんにちはここんにちはちちちはちちはちち");
+  const [text, setText] = useState("こんにちはこんにちはここんにちはちちちはちはちち");
   const [currentIndex, setCurrentIndex] = useState(0);
-  const targetText = "<h3>Sebastian";
+  const targetText = "<h3>Sebastian Duarte<h3>";
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -17,7 +17,7 @@ const AnimatedText: React.FC = () => {
       } else {
         clearInterval(interval);
       }
-    }, 200);
+    }, 100);
 
     return () => clearInterval(interval);
   }, [currentIndex, targetText]);

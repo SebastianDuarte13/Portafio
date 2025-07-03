@@ -55,6 +55,7 @@
 }
 
 .japanese-text {
+  margin-top: 30px;
   display: flex;
   gap: 1rem;
   justify-content: center;
