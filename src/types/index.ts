@@ -1,3 +1,4 @@
+import React from "react";
 export interface Project {
   id: number;
   title: string;
@@ -23,5 +24,5 @@ export interface ContactForm {
 export interface SocialLink {
   name: string;
   url: string;
-  icon: JSX.Element;
+  icon: React.ReactNode;
 }
