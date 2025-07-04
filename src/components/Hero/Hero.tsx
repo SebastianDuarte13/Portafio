@@ -25,7 +25,7 @@ const Hero: React.FC = () => {
     cursorTrail.classList.add('cursor-effect');
     cursorTrail.style.left = x + 'px';
     cursorTrail.style.top = y + 'px';
-    document.body.appendChild(cursorTrail);
+    // document.body.appendChild(cursorTrail);
 
     setTimeout(() => {
       cursorTrail.remove();

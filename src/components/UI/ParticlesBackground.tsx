@@ -14,6 +14,7 @@ const ParticlesBackground: React.FC = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const particlesRef = useRef<Particle[]>([]);
   const animationIdRef = useRef<number>(0);
+  const mouseRef = useRef<{ x: number; y: number } | null>(null);
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -47,6 +48,16 @@ const ParticlesBackground: React.FC = () => {
         });
       }
     };
+
+    // Mouse interactivity
+    const handleMouseMove = (e: MouseEvent) => {
+      mouseRef.current = { x: e.clientX, y: e.clientY };
+    };
+    const handleMouseLeave = () => {
+      mouseRef.current = null;
+    };
+    window.addEventListener('mousemove', handleMouseMove);
+    window.addEventListener('mouseleave', handleMouseLeave);
 
     // Animar partículas
     const animate = () => {
@@ -86,7 +97,31 @@ const ParticlesBackground: React.FC = () => {
             ctx.stroke();
           }
         });
+        // Línea entre el cursor y partículas cercanas
+        if (mouseRef.current) {
+          const dx = particle.x - mouseRef.current.x;
+          const dy = particle.y - mouseRef.current.y;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          if (distance < 120) {
+            ctx.beginPath();
+            ctx.moveTo(particle.x, particle.y);
+            ctx.lineTo(mouseRef.current.x, mouseRef.current.y);
+            ctx.strokeStyle = `rgba(255, 255, 255, ${0.35 * (1 - distance / 120)})`;
+            ctx.lineWidth = 0.7;
+            ctx.stroke();
+          }
+        }
       });
+      // Dibuja el cursor como partícula (invisible, solo líneas)
+      // if (mouseRef.current) {
+      //   ctx.beginPath();
+      //   ctx.arc(mouseRef.current.x, mouseRef.current.y, 4, 0, Math.PI * 2);
+      //   ctx.fillStyle = 'rgba(255,255,255,0.7)';
+      //   ctx.shadowColor = '#fff';
+      //   ctx.shadowBlur = 8;
+      //   ctx.fill();
+      //   ctx.shadowBlur = 0;
+      // }
 
       animationIdRef.current = requestAnimationFrame(animate);
     };
@@ -96,6 +131,8 @@ const ParticlesBackground: React.FC = () => {
 
     return () => {
       window.removeEventListener('resize', resizeCanvas);
+      window.removeEventListener('mousemove', handleMouseMove);
+      window.removeEventListener('mouseleave', handleMouseLeave);
       if (animationIdRef.current) {
         cancelAnimationFrame(animationIdRef.current);
       }
