@@ -87,9 +87,9 @@ const Hero: React.FC = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.5, duration: 0.8 }}
           >
-            <h2 className="temblor letra3">鑑</h2>
-            <h2 className="temblor letra3">人</h2>
-            <h2 className="temblor letra3">和</h2>
+            <h2 className="temblor letra3">★</h2>
+            <h2 className="temblor letra3">SPACE</h2>
+            <h2 className="temblor letra3">★</h2>
           </motion.div>
 
           <div className="animated-text-container">
@@ -143,9 +143,9 @@ const Hero: React.FC = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 3, duration: 0.8 }}
           >
-            <h2 className="temblor letra3">恐</h2>
+            <h2 className="temblor letra3">★</h2>
             <h2 className="temblor letra3">予</h2>
-            <h2 className="temblor letra3">界</h2>
+            <h2 className="temblor letra3">★</h2>
           </motion.div>
         </motion.div>
       </div>

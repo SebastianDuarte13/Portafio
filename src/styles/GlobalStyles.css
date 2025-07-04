@@ -10,109 +10,31 @@
   box-sizing: border-box;
 }
 
-body {
-  font-family: 'Poppins', sans-serif;
-  background: #0a0a23;
-  color: #e0e6ff;
-  overflow-x: hidden;
-  min-height: 100vh;
-  position: relative;
-}
-
 html {
-  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-::-webkit-scrollbar {
-  width: 8px;
-}
-
-::-webkit-scrollbar-track {
-  background: #1a1a1a;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #0053a5;
-  border-radius: 4px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #0066cc;
-}
-
-.cursor-effect {
-  position: fixed;
-  width: 10px;
-  height: 10px;
-  background: radial-gradient(circle, rgba(0, 83, 165, 0.8) 0%, transparent 70%);
-  border-radius: 50%;
-  pointer-events: none;
-  z-index: 9999;
-  animation: cursorFade 0.6s ease-out forwards;
-}
-
-@keyframes cursorFade {
-  0% {
-    opacity: 1;
-    transform: scale(1);
-  }
-  100% {
-    opacity: 0;
-    transform: scale(3);
-  }
-}
-
-/* Utilidades de fuentes */
-.poppins-light {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 300;
-}
-
-.poppins-regular {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 400;
-}
-
-.poppins-semibold {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 600;
-}
-
-.poppins-semibold-italic {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 600;
-  font-style: italic;
-}
-
-.rocknroll-one-regular {
-  font-family: 'RocknRoll One', cursive;
-  font-weight: 400;
-}
-
-.neonderthaw-regular {
-  font-family: 'Neonderthaw', cursive;
-  font-weight: 400;
-}
-
-.mukta-malar-extralight {
-  font-family: 'Mukta Malar', sans-serif;
-  font-weight: 200;
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background: #090915;
+  color: #fff;
+  overflow-x: hidden;
 }
 
 /* Contenedor principal */
 .app-container {
   position: relative;
   min-height: 100vh;
-  background: transparent;
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
   display: flex;
   flex-direction: column;
-  z-index: 1;
 }
 
 main {
   flex: 1;
-  background: transparent;
-  z-index: 1;
 }
 
 /* Accesibilidad y enfoque */
@@ -202,8 +124,82 @@ a {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
-  
-  html {
-    scroll-behavior: auto;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(100, 100, 150, 0.3);
+  /* #ffe066 */
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(100, 100, 150, 0.5);
+  /* #ffe066 */
+}
+
+.cursor-effect {
+  position: fixed;
+  width: 25px;
+  height: 25px;
+  background: radial-gradient(circle, rgba(206, 205, 205, 0.8) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  animation: cursorFade 0.6s ease-out forwards;
+}
+
+@keyframes cursorFade {
+  0% {
+    opacity: 1;
+    transform: scale(1);
   }
+  100% {
+    opacity: 0;
+    transform: scale(3);
+  }
+}
+
+/* Utilidades de fuentes */
+.poppins-light {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+}
+
+.poppins-regular {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+}
+
+.poppins-semibold {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+}
+
+.poppins-semibold-italic {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.rocknroll-one-regular {
+  font-family: 'RocknRoll One', cursive;
+  font-weight: 400;
+}
+
+.neonderthaw-regular {
+  font-family: 'Neonderthaw', cursive;
+  font-weight: 400;
+}
+
+.mukta-malar-extralight {
+  font-family: 'Mukta Malar', sans-serif;
+  font-weight: 200;
 }
