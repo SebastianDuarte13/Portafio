@@ -98,8 +98,8 @@ const Footer: React.FC = () => {
           <motion.div className="footer-contact" variants={itemVariants}>
             <h4>Contacto</h4>
             <div className="contact-info">
-              <p><i className="fas fa-envelope"></i> tu.email@ejemplo.com</p>
-              <p><i className="fas fa-phone"></i> +57 300 123 4567</p>
+              <p><i className="fas fa-envelope"></i> jsdr177@gmail.com</p>
+              <p><i className="fas fa-phone"></i> +57 3227447394</p>
               <p><i className="fas fa-map-marker-alt"></i> Colombia</p>
             </div>
           </motion.div>

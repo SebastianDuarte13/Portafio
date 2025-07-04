@@ -3,6 +3,8 @@
   background: linear-gradient(135deg, #0a0a0a 0%, #111111 100%);
   position: relative;
   overflow: hidden;
+    /* es para poner el fondo completamente solido */
+  z-index: 1; 
 }
 
 .projects-section::before {

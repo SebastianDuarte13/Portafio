@@ -6,6 +6,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  /* es para poner el fondo completamente solido */
+  z-index: 1; 
 }
 
 .purpose-container {

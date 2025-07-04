@@ -4,6 +4,8 @@
   color: white;
   position: relative;
   overflow: hidden;
+    /* es para poner el fondo completamente solido */
+  z-index: 1; 
 }
 
 .contact::before {

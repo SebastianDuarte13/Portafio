@@ -12,10 +12,11 @@
 
 body {
   font-family: 'Poppins', sans-serif;
-  background-color: #0a0a0a;
-  color: #ffffff;
+  background: #0a0a23;
+  color: #e0e6ff;
   overflow-x: hidden;
   min-height: 100vh;
+  position: relative;
 }
 
 html {
@@ -102,13 +103,16 @@ html {
 .app-container {
   position: relative;
   min-height: 100vh;
-  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+  background: transparent;
   display: flex;
   flex-direction: column;
+  z-index: 1;
 }
 
 main {
   flex: 1;
+  background: transparent;
+  z-index: 1;
 }
 
 /* Accesibilidad y enfoque */
